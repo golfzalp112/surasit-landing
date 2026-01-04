@@ -441,34 +441,32 @@ const SurasitLandingPagePro = () => {
 
               {/* Attention-Grabbing Headline */}
               <h1 className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight transition-all duration-700 delay-100 ${heroLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                <span className="text-cyan-400">เบื่อไหม?</span> ที่เลือกตั้งทีไร<br/>
-                <span className="text-white">ชีวิตก็ไม่เคยดีขึ้น...</span>
+                <span className="text-cyan-400">เบื่อไหม?</span><br className="md:hidden" /> ที่เลือกตั้งทีไร ชีวิตก็ไม่เคยดีขึ้น...
               </h1>
 
               {/* Irresistible Intrigue */}
-              <p className={`text-lg md:text-xl text-blue-200 mb-6 leading-relaxed transition-all duration-700 delay-200 ${heroLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                ถ้าคุณรู้สึกว่า <span className="text-white font-semibold">ค่าครองชีพแพงขึ้นทุกวัน</span><br/>
-                แต่รายได้เท่าเดิม... <span className="text-cyan-400">คุณไม่ได้อยู่คนเดียว</span>
+              <p className={`text-lg md:text-xl lg:text-2xl text-blue-200 mb-6 leading-relaxed transition-all duration-700 delay-200 ${heroLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                ถ้าคุณรู้สึกว่า <span className="text-white font-semibold">ค่าครองชีพแพงขึ้นทุกวัน</span> แต่รายได้เท่าเดิม...<br className="hidden md:block" />
+                <span className="text-cyan-400">คุณไม่ได้อยู่คนเดียว</span>
               </p>
 
-              <p className={`text-base md:text-lg text-blue-300 mb-8 transition-all duration-700 delay-300 ${heroLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                ผมเคยเป็น สส. มาแล้ว <span className="text-green-400 font-bold">40+ ปี</span> และผมรู้ว่า<br/>
-                <span className="text-white font-semibold">ปัญหาจริงๆ ของคนชลบุรีคืออะไร...</span>
+              <p className={`text-base md:text-lg lg:text-xl text-blue-300 mb-8 transition-all duration-700 delay-300 ${heroLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                ผมเคยเป็น สส. มาแล้ว <span className="text-green-400 font-bold">40+ ปี</span> และผมรู้ว่า <span className="text-white font-semibold">ปัญหาจริงๆ ของคนชลบุรีคืออะไร...</span>
               </p>
 
               {/* Quick Stats with Counter Animation */}
-              <div className={`flex flex-wrap justify-center lg:justify-start gap-3 mb-6 transition-all duration-700 delay-400 ${heroLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                <div className="group px-4 py-3 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 hover:border-green-500/50 hover:scale-105 transition-all cursor-pointer">
-                  <div className="text-3xl md:text-4xl font-black text-green-400 group-hover:animate-bounce">8</div>
-                  <div className="text-xs text-blue-300">กาเบอร์</div>
+              <div className={`flex flex-wrap justify-center lg:justify-start gap-4 mb-6 transition-all duration-700 delay-400 ${heroLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                <div className="group px-5 py-4 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 hover:border-green-500/50 hover:scale-105 transition-all cursor-pointer">
+                  <div className="text-4xl md:text-5xl font-black text-green-400 group-hover:animate-bounce">8</div>
+                  <div className="text-sm md:text-base text-blue-300">กาเบอร์</div>
                 </div>
-                <div ref={experienceCounter.ref} className="group px-4 py-3 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 hover:border-cyan-500/50 hover:scale-105 transition-all cursor-pointer">
-                  <div className="text-3xl md:text-4xl font-black text-cyan-400">{experienceCounter.count}+</div>
-                  <div className="text-xs text-blue-300">ปี ประสบการณ์</div>
+                <div ref={experienceCounter.ref} className="group px-5 py-4 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 hover:border-cyan-500/50 hover:scale-105 transition-all cursor-pointer">
+                  <div className="text-4xl md:text-5xl font-black text-cyan-400">{experienceCounter.count}+</div>
+                  <div className="text-sm md:text-base text-blue-300">ปี ประสบการณ์</div>
                 </div>
-                <div className="group px-4 py-3 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 hover:border-sky-500/50 hover:scale-105 transition-all cursor-pointer">
-                  <div className="text-3xl md:text-4xl font-black text-sky-400">{daysLeft}</div>
-                  <div className="text-xs text-blue-300">วันที่เหลือ</div>
+                <div className="group px-5 py-4 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 hover:border-sky-500/50 hover:scale-105 transition-all cursor-pointer">
+                  <div className="text-4xl md:text-5xl font-black text-sky-400">{daysLeft}</div>
+                  <div className="text-sm md:text-base text-blue-300">วันที่เหลือ</div>
                 </div>
               </div>
 
@@ -518,22 +516,21 @@ const SurasitLandingPagePro = () => {
       <section id="problems" className="py-16 md:py-20 px-4 md:px-6 bg-gradient-to-b from-red-950/30 to-transparent">
         <div className="max-w-7xl mx-auto">
           <AnimateIn animation="fadeUp" className="text-center mb-12">
-            <span className="inline-block px-4 py-2 bg-red-500/20 border border-red-500/30 rounded-full text-red-400 text-sm mb-4">
+            <span className="inline-block px-4 py-2 bg-red-500/20 border border-red-500/30 rounded-full text-red-400 text-sm md:text-base mb-4">
               ปัญหาที่คุณเจอทุกวัน
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-              <span className="text-red-400">6 ปัญหา</span>ที่ทำให้<br/>
-              ชีวิตคนชลบุรี<span className="text-white">ยากลำบาก</span>
+              <span className="text-red-400">6 ปัญหา</span>ที่ทำให้ชีวิตคนชลบุรี<span className="text-white">ยากลำบาก</span>
             </h2>
-            <p className="text-blue-300 text-lg">คุณเจอปัญหาเหล่านี้ไหม?</p>
+            <p className="text-blue-300 text-lg md:text-xl">คุณเจอปัญหาเหล่านี้ไหม?</p>
           </AnimateIn>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {problems.map((item, i) => (
               <AnimateIn key={i} animation="scale" delay={i * 100}>
                 <div className="group p-6 bg-red-950/30 rounded-2xl border border-red-500/20 hover:border-red-500/50 hover:bg-red-950/50 transition-all hover:-translate-y-1 h-full">
-                  <div className="text-3xl font-bold text-red-400/50 mb-3">{item.num}</div>
-                  <p className="text-white font-medium">{item.problem}</p>
+                  <div className="text-3xl md:text-4xl font-bold text-red-400/50 mb-3">{item.num}</div>
+                  <p className="text-white font-medium text-base md:text-lg">{item.problem}</p>
                 </div>
               </AnimateIn>
             ))}
@@ -569,14 +566,14 @@ const SurasitLandingPagePro = () => {
       <section id="solutions" className="py-16 md:py-20 px-4 md:px-6">
         <div className="max-w-7xl mx-auto">
           <AnimateIn animation="fadeUp" className="text-center mb-12">
-            <span className="inline-block px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-full text-green-400 text-sm mb-4">
+            <span className="inline-block px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-full text-green-400 text-sm md:text-base mb-4">
               ทางออกที่คุณรอคอย
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
               นโยบาย <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">เศรษฐกิจ 10 พลัส+</span>
             </h2>
-            <p className="text-blue-300 text-lg">แก้ปัญหาตรงจุด <span className="text-green-400 font-semibold">เห็นผลจริง!</span></p>
-            <p className="text-white mt-2">5 ทั่วถึง + 5 คุณภาพ = ชีวิตดีขึ้นแน่นอน</p>
+            <p className="text-blue-300 text-lg md:text-xl">แก้ปัญหาตรงจุด <span className="text-green-400 font-semibold">เห็นผลจริง!</span></p>
+            <p className="text-white mt-2 text-base md:text-lg">5 ทั่วถึง + 5 คุณภาพ = ชีวิตดีขึ้นแน่นอน</p>
           </AnimateIn>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
@@ -584,16 +581,16 @@ const SurasitLandingPagePro = () => {
               <AnimateIn key={i} animation="fadeUp" delay={i * 80}>
                 <div
                   onClick={() => setActivePolicy(activePolicy === i ? null : i)}
-                  className={`group relative p-4 md:p-5 rounded-2xl border transition-all cursor-pointer overflow-hidden h-full ${
+                  className={`group relative p-5 md:p-6 rounded-2xl border transition-all cursor-pointer overflow-hidden h-full ${
                     activePolicy === i
                       ? 'bg-green-600/30 border-green-400/50 scale-105'
                       : 'bg-white/5 border-white/10 hover:border-green-500/30 hover:bg-white/10'
                   }`}
                 >
-                  <div className="text-2xl font-bold text-green-400/50 mb-2">{item.num}</div>
-                  <h4 className="font-bold text-sm mb-1">{item.title}</h4>
-                  <p className="text-xs text-blue-200/70 mb-2">{item.desc}</p>
-                  <div className={`text-xs p-2 rounded-lg transition-all ${activePolicy === i ? 'bg-green-500/20 text-green-300 opacity-100' : 'opacity-0 h-0 overflow-hidden sm:opacity-100 sm:h-auto bg-green-500/10 text-green-400'}`}>
+                  <div className="text-2xl md:text-3xl font-bold text-green-400/50 mb-2">{item.num}</div>
+                  <h4 className="font-bold text-base md:text-lg mb-2">{item.title}</h4>
+                  <p className="text-sm md:text-base text-blue-200/80 mb-3">{item.desc}</p>
+                  <div className={`text-sm p-2 rounded-lg transition-all ${activePolicy === i ? 'bg-green-500/20 text-green-300 opacity-100' : 'opacity-0 h-0 overflow-hidden sm:opacity-100 sm:h-auto bg-green-500/10 text-green-400'}`}>
                     <span className="font-semibold">ผลลัพธ์:</span> {item.result}
                   </div>
                 </div>
@@ -632,8 +629,8 @@ const SurasitLandingPagePro = () => {
                         {String(i + 1).padStart(2, '0')}
                       </div>
                       <div>
-                        <div className="font-semibold text-cyan-400">{item.title}</div>
-                        <div className="text-sm text-blue-200">{item.desc}</div>
+                        <div className="font-semibold text-base md:text-lg text-cyan-400">{item.title}</div>
+                        <div className="text-sm md:text-base text-blue-200">{item.desc}</div>
                       </div>
                     </div>
                   ))}
@@ -650,10 +647,10 @@ const SurasitLandingPagePro = () => {
                 <div className="space-y-4">
                   {experiences.map((item, i) => (
                     <div key={i} className="flex items-center gap-4 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-all">
-                      <div className="text-2xl md:text-3xl font-black text-green-400 w-16">{item.years}</div>
+                      <div className="text-2xl md:text-3xl font-black text-green-400 w-16 md:w-20">{item.years}</div>
                       <div className="flex-1">
-                        <div className="font-semibold">{item.role}</div>
-                        <div className="text-xs text-blue-300">พ.ศ. {item.period}</div>
+                        <div className="font-semibold text-base md:text-lg">{item.role}</div>
+                        <div className="text-sm md:text-base text-blue-300">พ.ศ. {item.period}</div>
                       </div>
                     </div>
                   ))}
@@ -670,7 +667,7 @@ const SurasitLandingPagePro = () => {
       <section id="track-record" className="py-16 md:py-20 px-4 md:px-6">
         <div className="max-w-7xl mx-auto">
           <AnimateIn animation="fadeUp" className="text-center mb-12">
-            <span className="inline-block px-4 py-2 bg-sky-500/20 border border-sky-500/30 rounded-full text-sky-400 text-sm mb-4">
+            <span className="inline-block px-4 py-2 bg-sky-500/20 border border-sky-500/30 rounded-full text-sky-400 text-sm md:text-base mb-4">
               ผลงานที่ผ่านมา
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -683,9 +680,9 @@ const SurasitLandingPagePro = () => {
             {trackRecords.map((item, i) => (
               <AnimateIn key={i} animation="scale" delay={i * 150}>
                 <div className="group p-6 bg-gradient-to-br from-sky-900/30 to-blue-900/30 rounded-2xl border border-sky-500/20 hover:border-sky-500/50 transition-all hover:-translate-y-2 h-full">
-                  <div className="text-3xl font-bold text-sky-400/50 mb-4">{item.num}</div>
-                  <h4 className="font-bold text-lg mb-2">{item.title}</h4>
-                  <p className="text-sm text-blue-200/70">{item.desc}</p>
+                  <div className="text-3xl md:text-4xl font-bold text-sky-400/50 mb-4">{item.num}</div>
+                  <h4 className="font-bold text-lg md:text-xl mb-2">{item.title}</h4>
+                  <p className="text-sm md:text-base text-blue-200/70">{item.desc}</p>
                 </div>
               </AnimateIn>
             ))}
@@ -694,11 +691,10 @@ const SurasitLandingPagePro = () => {
           <AnimateIn animation="fadeUp" delay={200}>
             <div className="mt-12 p-8 bg-white/5 rounded-3xl border border-white/10 text-center">
               <div className="text-5xl font-serif text-white/20 mb-4">&quot;</div>
-              <blockquote className="text-xl md:text-2xl font-medium text-white mb-4">
-                ผมทำงานให้ชาวชลบุรีมากว่า 40 ปี<br/>
-                <span className="text-cyan-400">และจะทำต่อไปจนกว่าชีวิตพี่น้องจะดีขึ้น</span>
+              <blockquote className="text-xl md:text-2xl lg:text-3xl font-medium text-white mb-4 leading-relaxed">
+                ผมทำงานให้ชาวชลบุรีมากว่า 40 ปี และจะทำต่อไปจนกว่า<span className="text-cyan-400">ชีวิตพี่น้องจะดีขึ้น</span>
               </blockquote>
-              <cite className="text-blue-300">— สุรสิทธิ์ นิธิวุฒิวรรักษ์</cite>
+              <cite className="text-blue-300 text-base md:text-lg">— สุรสิทธิ์ นิธิวุฒิวรรักษ์</cite>
             </div>
           </AnimateIn>
         </div>
@@ -852,7 +848,7 @@ const SurasitLandingPagePro = () => {
       <section id="area" className="py-16 md:py-20 px-4 md:px-6">
         <div className="max-w-7xl mx-auto">
           <AnimateIn animation="fadeUp" className="text-center mb-12">
-            <span className="inline-block px-4 py-2 bg-blue-500/20 border border-blue-500/30 rounded-full text-blue-400 text-sm mb-4">
+            <span className="inline-block px-4 py-2 bg-blue-500/20 border border-blue-500/30 rounded-full text-blue-400 text-sm md:text-base mb-4">
               พื้นที่เขตเลือกตั้ง
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -870,7 +866,7 @@ const SurasitLandingPagePro = () => {
                   <h3 className="text-xl md:text-2xl font-bold text-white mb-4">{area.name}</h3>
                   <div className="flex flex-wrap gap-2">
                     {area.tambons.map((tambon, j) => (
-                      <span key={j} className="px-3 py-1 bg-blue-500/20 rounded-full text-blue-300 text-sm border border-blue-500/30">
+                      <span key={j} className="px-3 py-1.5 bg-blue-500/20 rounded-full text-blue-300 text-sm md:text-base border border-blue-500/30">
                         {tambon}
                       </span>
                     ))}
@@ -1002,18 +998,18 @@ const SurasitLandingPagePro = () => {
                 <Image src="/logo.jpg" alt="พรรคภูมิใจไทย" width={48} height={48} className="w-full h-full object-cover" />
               </div>
               <div>
-                <div className="font-bold">พรรคภูมิใจไทย</div>
-                <div className="text-sm text-blue-300">ชลบุรี เขต 6</div>
+                <div className="font-bold text-lg">พรรคภูมิใจไทย</div>
+                <div className="text-sm md:text-base text-blue-300">ชลบุรี เขต 6</div>
               </div>
             </div>
 
             <div className="text-center md:text-right">
-              <div className="text-cyan-400 font-bold mb-1">พูดแล้วทำ พลัส+</div>
-              <div className="text-blue-400 text-sm">เคียงข้างประชาชน • ก้าวไปด้วยกันทุก Generation</div>
+              <div className="text-cyan-400 font-bold text-lg mb-1">พูดแล้วทำ พลัส+</div>
+              <div className="text-blue-400 text-sm md:text-base">เคียงข้างประชาชน • ก้าวไปด้วยกันทุก Generation</div>
             </div>
           </div>
 
-          <div className="mt-8 pt-8 border-t border-white/10 text-center text-blue-400/50 text-xs">
+          <div className="mt-8 pt-8 border-t border-white/10 text-center text-blue-400/50 text-sm">
             © 2569 สุรสิทธิ์ นิธิวุฒิวรรักษ์ • ผู้สมัคร สส. ชลบุรี เขต 6 พรรคภูมิใจไทย
           </div>
         </div>
