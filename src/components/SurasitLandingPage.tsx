@@ -506,11 +506,6 @@ const SurasitLandingPagePro = () => {
                     priority
                   />
                 </div>
-
-                {/* Floating Number 8 Badge */}
-                <div className="absolute -bottom-4 -right-4 w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center shadow-xl shadow-green-500/40 animate-bounce">
-                  <span className="text-3xl md:text-4xl font-black text-white">8</span>
-                </div>
               </div>
             </div>
           </div>
