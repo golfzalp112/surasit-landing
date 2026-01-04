@@ -440,18 +440,31 @@ const SurasitLandingPagePro = () => {
               </div>
 
               {/* Attention-Grabbing Headline */}
-              <h1 className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight transition-all duration-700 delay-100 ${heroLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                <span className="text-cyan-400">เบื่อไหม?</span><br className="md:hidden" /> ที่เลือกตั้งทีไร ชีวิตก็ไม่เคยดีขึ้น...
+              <h1 className={`text-2xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight transition-all duration-700 delay-100 ${heroLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                <span className="text-cyan-400">เบื่อไหม?</span>
+                <br className="md:hidden" />
+                <span className="hidden md:inline"> </span>ที่เลือกตั้งทีไร
+                <br className="md:hidden" />
+                <span className="hidden md:inline"> </span>ชีวิตก็ไม่เคยดีขึ้น...
               </h1>
 
               {/* Irresistible Intrigue */}
-              <p className={`text-lg md:text-xl lg:text-2xl text-blue-200 mb-6 leading-relaxed transition-all duration-700 delay-200 ${heroLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                ถ้าคุณรู้สึกว่า <span className="text-white font-semibold">ค่าครองชีพแพงขึ้นทุกวัน</span> แต่รายได้เท่าเดิม...<br className="hidden md:block" />
+              <p className={`text-base md:text-xl lg:text-2xl text-blue-200 mb-6 leading-relaxed transition-all duration-700 delay-200 ${heroLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                ถ้าคุณรู้สึกว่า
+                <br className="md:hidden" />
+                <span className="text-white font-semibold">ค่าครองชีพแพงขึ้นทุกวัน</span>
+                <br className="md:hidden" />
+                แต่รายได้เท่าเดิม...
+                <br />
                 <span className="text-cyan-400">คุณไม่ได้อยู่คนเดียว</span>
               </p>
 
               <p className={`text-base md:text-lg lg:text-xl text-blue-300 mb-8 transition-all duration-700 delay-300 ${heroLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                ผมเคยเป็น สส. มาแล้ว <span className="text-green-400 font-bold">40+ ปี</span> และผมรู้ว่า <span className="text-white font-semibold">ปัญหาจริงๆ ของคนชลบุรีคืออะไร...</span>
+                ผมเคยเป็น สส. มาแล้ว <span className="text-green-400 font-bold">40+ ปี</span>
+                <br className="md:hidden" />
+                และผมรู้ว่า
+                <br className="md:hidden" />
+                <span className="text-white font-semibold">ปัญหาจริงๆ ของคนชลบุรีคืออะไร...</span>
               </p>
 
               {/* Quick Stats with Counter Animation */}
