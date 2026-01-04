@@ -294,12 +294,6 @@ const SurasitLandingPagePro = () => {
     { name: 'อำเภอศรีราชา', tambons: ['ต.บางพระ', 'ต.ศรีราชา', 'ต.สุรศักดิ์', 'ต.ทุ่งสุขลา'] },
   ];
 
-  const testimonials = [
-    { name: 'ลุงสมชาย', area: 'ต.บางพระ', quote: 'ท่านสุรสิทธิ์ช่วยผลักดันถนนเข้าหมู่บ้านเรา ตอนนี้ชีวิตสะดวกขึ้นมาก', avatar: '👨‍🌾' },
-    { name: 'ป้ามาลี', area: 'ต.ศรีราชา', quote: 'เป็นคนทำงานจริง พูดแล้วทำ ไม่เคยลืมชาวบ้าน', avatar: '👩‍🦳' },
-    { name: 'คุณวิชัย', area: 'อ.เกาะสีชัง', quote: 'ท่านลงพื้นที่บ่อย รับฟังปัญหาชาวประมง ช่วยเหลือเรื่องท่าเรือ', avatar: '🧔' },
-  ];
-
   return (
     <div className="min-h-screen bg-blue-950 text-white overflow-hidden" style={{ fontFamily: "'Prompt', sans-serif" }}>
       {/* Animated Background - Diagonal Lines */}
@@ -710,55 +704,6 @@ const SurasitLandingPagePro = () => {
                 <span className="text-cyan-400">และจะทำต่อไปจนกว่าชีวิตพี่น้องจะดีขึ้น</span>
               </blockquote>
               <cite className="text-blue-300">— สุรสิทธิ์ นิธิวุฒิวรรักษ์</cite>
-            </div>
-          </AnimateIn>
-        </div>
-      </section>
-
-      {/* ==================== */}
-      {/* TESTIMONIAL SECTION */}
-      {/* ==================== */}
-      <section className="py-16 md:py-20 px-4 md:px-6 bg-gradient-to-b from-purple-900/20 to-transparent">
-        <div className="max-w-6xl mx-auto">
-          <AnimateIn animation="fadeUp" className="text-center mb-12">
-            <span className="inline-block px-4 py-2 bg-purple-500/20 border border-purple-500/30 rounded-full text-purple-400 text-sm mb-4">
-              เสียงจากประชาชน
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              พี่น้องชาวชลบุรี<span className="text-purple-400">พูดถึงเรา</span>
-            </h2>
-          </AnimateIn>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {testimonials.map((item, i) => (
-              <AnimateIn key={i} animation="fadeUp" delay={i * 150}>
-                <div className="p-6 bg-white/5 rounded-3xl border border-white/10 hover:border-purple-500/50 transition-all h-full relative">
-                  {/* Quote Icon */}
-                  <div className="absolute -top-3 -left-3 w-10 h-10 bg-purple-500/30 rounded-full flex items-center justify-center">
-                    <span className="text-purple-300 text-xl">&ldquo;</span>
-                  </div>
-
-                  {/* Avatar */}
-                  <div className="text-4xl mb-4">{item.avatar}</div>
-
-                  {/* Quote */}
-                  <p className="text-blue-100 mb-4 italic">&ldquo;{item.quote}&rdquo;</p>
-
-                  {/* Name & Area */}
-                  <div className="mt-auto">
-                    <div className="font-bold text-white">{item.name}</div>
-                    <div className="text-sm text-purple-300">{item.area}</div>
-                  </div>
-                </div>
-              </AnimateIn>
-            ))}
-          </div>
-
-          <AnimateIn animation="fadeUp" delay={300}>
-            <div className="text-center mt-8">
-              <p className="text-blue-300">
-                <span className="text-purple-400 font-bold">40+ ปี</span> ของการทำงานเพื่อพี่น้องชาวชลบุรี
-              </p>
             </div>
           </AnimateIn>
         </div>
