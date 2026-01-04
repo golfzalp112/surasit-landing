@@ -1062,14 +1062,6 @@ const SurasitLandingPagePro = () => {
           </a>
         </div>
 
-        {/* Vote Button */}
-        <button
-          onClick={() => scrollToSection('vote')}
-          className="flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full font-bold shadow-2xl shadow-green-500/40 hover:scale-110 transition-transform animate-pulse"
-        >
-          <span className="text-2xl font-black">8</span>
-          <span className="text-sm">กุมภา กาเบอร์ 8</span>
-        </button>
       </div>
 
       {/* ==================== */}
