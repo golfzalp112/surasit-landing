@@ -532,10 +532,14 @@ const SurasitLandingPagePro = () => {
             <span className="inline-block px-4 py-2 bg-red-500/20 border border-red-500/30 rounded-full text-red-400 text-sm md:text-base mb-4">
               ปัญหาที่คุณเจอทุกวัน
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-              <span className="text-red-400">6 ปัญหา</span>ที่ทำให้ชีวิตคนชลบุรี<span className="text-white">ยากลำบาก</span>
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4">
+              <span className="text-red-400">6 ปัญหา</span>
+              <br className="md:hidden" />
+              ที่ทำให้ชีวิตคนชลบุรี
+              <br className="md:hidden" />
+              <span className="text-white">ยากลำบาก</span>
             </h2>
-            <p className="text-blue-300 text-lg md:text-xl">คุณเจอปัญหาเหล่านี้ไหม?</p>
+            <p className="text-blue-300 text-base md:text-xl">คุณเจอปัญหาเหล่านี้ไหม?</p>
           </AnimateIn>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -550,11 +554,15 @@ const SurasitLandingPagePro = () => {
           </div>
 
           <div className="text-center mt-10">
-            <p className="text-xl md:text-2xl text-white mb-2">
-              ถ้าคุณพยักหน้าอย่างน้อย <span className="text-cyan-400 font-bold">1 ข้อ</span>...
+            <p className="text-lg md:text-2xl text-white mb-2">
+              ถ้าคุณพยักหน้าอย่างน้อย
+              <br className="md:hidden" />
+              <span className="text-cyan-400 font-bold"> 1 ข้อ</span>...
             </p>
-            <p className="text-lg text-blue-300">
-              แสดงว่า<span className="text-green-400 font-semibold">คุณต้องการคนที่แก้ปัญหาได้จริง!</span>
+            <p className="text-base md:text-lg text-blue-300">
+              แสดงว่า
+              <br className="md:hidden" />
+              <span className="text-green-400 font-semibold">คุณต้องการคนที่แก้ปัญหาได้จริง!</span>
             </p>
           </div>
         </div>
@@ -582,11 +590,13 @@ const SurasitLandingPagePro = () => {
             <span className="inline-block px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-full text-green-400 text-sm md:text-base mb-4">
               ทางออกที่คุณรอคอย
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-              นโยบาย <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">เศรษฐกิจ 10 พลัส+</span>
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4">
+              นโยบาย
+              <br className="md:hidden" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">เศรษฐกิจ 10 พลัส+</span>
             </h2>
-            <p className="text-blue-300 text-lg md:text-xl">แก้ปัญหาตรงจุด <span className="text-green-400 font-semibold">เห็นผลจริง!</span></p>
-            <p className="text-white mt-2 text-base md:text-lg">5 ทั่วถึง + 5 คุณภาพ = ชีวิตดีขึ้นแน่นอน</p>
+            <p className="text-blue-300 text-base md:text-xl">แก้ปัญหาตรงจุด <span className="text-green-400 font-semibold">เห็นผลจริง!</span></p>
+            <p className="text-white mt-2 text-sm md:text-lg">5 ทั่วถึง + 5 คุณภาพ = ชีวิตดีขึ้นแน่นอน</p>
           </AnimateIn>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
@@ -619,13 +629,19 @@ const SurasitLandingPagePro = () => {
       <section id="credentials" className="py-16 md:py-20 px-4 md:px-6 bg-gradient-to-b from-blue-900/30 to-transparent">
         <div className="max-w-7xl mx-auto">
           <AnimateIn animation="fadeUp" className="text-center mb-12">
-            <span className="inline-block px-8 py-4 bg-cyan-500/30 border-2 border-cyan-400/50 rounded-full text-cyan-300 text-xl md:text-2xl font-bold mb-6 shadow-lg shadow-cyan-500/20">
+            <span className="inline-block px-6 py-3 md:px-8 md:py-4 bg-cyan-500/30 border-2 border-cyan-400/50 rounded-full text-cyan-300 text-lg md:text-2xl font-bold mb-6 shadow-lg shadow-cyan-500/20">
               ทำไมต้อง &quot;สุรสิทธิ์&quot;?
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              ไม่ใช่<span className="text-cyan-400">หน้าใหม่</span>ที่มาลองผิดลองถูก
+            <h2 className="text-2xl md:text-4xl font-bold mb-4">
+              ไม่ใช่<span className="text-cyan-400">หน้าใหม่</span>
+              <br className="md:hidden" />
+              ที่มาลองผิดลองถูก
             </h2>
-            <p className="text-blue-300 text-lg">แต่เป็นคนที่<span className="text-white font-semibold">พิสูจน์ตัวเองมาแล้ว 40+ ปี</span></p>
+            <p className="text-blue-300 text-base md:text-lg">
+              แต่เป็นคนที่
+              <br className="md:hidden" />
+              <span className="text-white font-semibold">พิสูจน์ตัวเองมาแล้ว 40+ ปี</span>
+            </p>
           </AnimateIn>
 
           <div className="grid lg:grid-cols-2 gap-8">
@@ -683,10 +699,16 @@ const SurasitLandingPagePro = () => {
             <span className="inline-block px-4 py-2 bg-sky-500/20 border border-sky-500/30 rounded-full text-sky-400 text-sm md:text-base mb-4">
               ผลงานที่ผ่านมา
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              <span className="text-sky-400">&quot;พูดแล้วทำ&quot;</span> ไม่ใช่แค่คำพูด
+            <h2 className="text-2xl md:text-4xl font-bold mb-4">
+              <span className="text-sky-400">&quot;พูดแล้วทำ&quot;</span>
+              <br className="md:hidden" />
+              ไม่ใช่แค่คำพูด
             </h2>
-            <p className="text-blue-300 text-lg">แต่เป็นสิ่งที่<span className="text-white font-semibold">พิสูจน์มาแล้วตลอด 40 ปี</span></p>
+            <p className="text-blue-300 text-base md:text-lg">
+              แต่เป็นสิ่งที่
+              <br className="md:hidden" />
+              <span className="text-white font-semibold">พิสูจน์มาแล้วตลอด 40 ปี</span>
+            </p>
           </AnimateIn>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -756,8 +778,12 @@ const SurasitLandingPagePro = () => {
 
           <AnimateIn animation="fadeUp" delay={300}>
             <div className="text-center mt-8">
-              <p className="text-blue-300 text-lg">
-                <span className="text-cyan-400 font-bold">&quot;อดีต สส. นิ่ม&quot;</span> — ประสบการณ์กว่า 40 ปี พร้อมทำงานเพื่อชาวชลบุรี
+              <p className="text-blue-300 text-base md:text-lg">
+                <span className="text-cyan-400 font-bold">&quot;อดีต สส. นิ่ม&quot;</span>
+                <br className="md:hidden" />
+                ประสบการณ์กว่า 40 ปี
+                <br className="md:hidden" />
+                พร้อมทำงานเพื่อชาวชลบุรี
               </p>
             </div>
           </AnimateIn>
@@ -808,11 +834,17 @@ const SurasitLandingPagePro = () => {
                 เหลือเวลาอีกแค่ {daysLeft} วัน
               </div>
 
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-                วันอาทิตย์ที่ 8 กุมภาพันธ์ 2569
+              <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4">
+                วันอาทิตย์ที่
+                <br className="md:hidden" />
+                8 กุมภาพันธ์ 2569
               </h2>
-              <p className="text-xl text-green-100 mb-2">เวลา 08.00 - 17.00 น.</p>
-              <p className="text-lg text-green-200 mb-8">เลือก สส.เขต (สส.แบบแบ่งเขต) • <span className="font-bold">บัตรสีเขียว</span></p>
+              <p className="text-lg md:text-xl text-green-100 mb-2">เวลา 08.00 - 17.00 น.</p>
+              <p className="text-base md:text-lg text-green-200 mb-8">
+                เลือก สส.เขต (สส.แบบแบ่งเขต)
+                <br className="md:hidden" />
+                <span className="font-bold">บัตรสีเขียว</span>
+              </p>
 
               {/* The Offer */}
               <div className="bg-white/20 backdrop-blur-xl rounded-2xl p-6 md:p-8 mb-8">
@@ -897,28 +929,30 @@ const SurasitLandingPagePro = () => {
       <section className="py-16 md:py-20 px-4 md:px-6 bg-gradient-to-b from-red-950/20 to-blue-950">
         <div className="max-w-4xl mx-auto text-center">
           <AnimateIn animation="fadeUp" className="mb-8">
-            <span className="inline-block px-8 py-4 bg-red-500/30 border-2 border-red-400/50 rounded-full text-red-300 text-xl md:text-2xl font-bold mb-6 shadow-lg shadow-red-500/20 animate-pulse">
+            <span className="inline-block px-6 py-3 md:px-8 md:py-4 bg-red-500/30 border-2 border-red-400/50 rounded-full text-red-300 text-lg md:text-2xl font-bold mb-6 shadow-lg shadow-red-500/20 animate-pulse">
               คำเตือน
             </span>
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            <h2 className="text-xl md:text-3xl font-bold mb-4">
               ถ้าคุณ<span className="text-red-400">ไม่ไปเลือกตั้ง</span>...
             </h2>
-            <div className="text-lg text-blue-200 space-y-2">
+            <div className="text-base md:text-lg text-blue-200 space-y-2">
               <p><span className="text-red-400 mr-2">—</span>คุณจะ<span className="text-white font-semibold">เสียสิทธิ์ทางการเมือง</span></p>
-              <p><span className="text-red-400 mr-2">—</span>คุณจะ<span className="text-white font-semibold">ไม่มีสิทธิ์บ่น</span>ถ้าชีวิตไม่ดีขึ้น</p>
-              <p><span className="text-red-400 mr-2">—</span>คุณจะปล่อยให้<span className="text-white font-semibold">คนอื่นเลือกอนาคตให้คุณ</span></p>
+              <p><span className="text-red-400 mr-2">—</span>คุณจะ<span className="text-white font-semibold">ไม่มีสิทธิ์บ่น</span><br className="md:hidden" />ถ้าชีวิตไม่ดีขึ้น</p>
+              <p><span className="text-red-400 mr-2">—</span>คุณจะปล่อยให้<br className="md:hidden" /><span className="text-white font-semibold">คนอื่นเลือกอนาคตให้คุณ</span></p>
             </div>
           </AnimateIn>
 
           <AnimateIn animation="scale" delay={200}>
-            <div className="p-8 bg-gradient-to-br from-green-600/20 to-blue-600/20 rounded-3xl border border-green-500/30">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                แต่ถ้าคุณ<span className="text-green-400">ไปเลือกตั้ง</span>และ<span className="text-cyan-400">กาเบอร์ 8</span>
+            <div className="p-6 md:p-8 bg-gradient-to-br from-green-600/20 to-blue-600/20 rounded-3xl border border-green-500/30">
+              <h3 className="text-xl md:text-3xl font-bold mb-4">
+                แต่ถ้าคุณ<span className="text-green-400">ไปเลือกตั้ง</span>
+                <br className="md:hidden" />
+                และ<span className="text-cyan-400">กาเบอร์ 8</span>
               </h3>
-              <div className="text-lg text-blue-200 space-y-2 mb-6">
-                <p><span className="text-green-400 mr-2">+</span>คุณจะได้ผู้แทนที่<span className="text-white font-semibold">ทำงานจริง พิสูจน์มาแล้ว 40 ปี</span></p>
-                <p><span className="text-green-400 mr-2">+</span>คุณจะได้นโยบาย<span className="text-white font-semibold">เศรษฐกิจ 10 พลัส+</span> ที่ช่วยคุณได้จริง</p>
-                <p><span className="text-green-400 mr-2">+</span>คุณจะมีส่วนร่วมในการ<span className="text-white font-semibold">เปลี่ยนแปลงชลบุรี</span>ให้ดีขึ้น</p>
+              <div className="text-base md:text-lg text-blue-200 space-y-2 mb-6">
+                <p><span className="text-green-400 mr-2">+</span>คุณจะได้ผู้แทนที่<br className="md:hidden" /><span className="text-white font-semibold">ทำงานจริง พิสูจน์มาแล้ว 40 ปี</span></p>
+                <p><span className="text-green-400 mr-2">+</span>คุณจะได้นโยบาย<br className="md:hidden" /><span className="text-white font-semibold">เศรษฐกิจ 10 พลัส+</span> ที่ช่วยคุณได้จริง</p>
+                <p><span className="text-green-400 mr-2">+</span>คุณจะมีส่วนร่วมในการ<br className="md:hidden" /><span className="text-white font-semibold">เปลี่ยนแปลงชลบุรี</span>ให้ดีขึ้น</p>
               </div>
 
               <button
@@ -938,10 +972,12 @@ const SurasitLandingPagePro = () => {
       <section className="py-12 px-4 md:px-6 bg-gradient-to-b from-blue-950 to-blue-900/50">
         <div className="max-w-4xl mx-auto text-center">
           <AnimateIn animation="fadeUp">
-            <h3 className="text-xl md:text-2xl font-bold mb-4">
-              ช่วยกันแชร์ให้เพื่อน<span className="text-cyan-400">ชาวชลบุรี</span>รู้จัก
+            <h3 className="text-lg md:text-2xl font-bold mb-4">
+              ช่วยกันแชร์ให้เพื่อน
+              <br className="md:hidden" />
+              <span className="text-cyan-400">ชาวชลบุรี</span>รู้จัก
             </h3>
-            <p className="text-blue-300 mb-6">บอกต่อเพื่อน ครอบครัว และคนที่คุณรัก</p>
+            <p className="text-blue-300 text-sm md:text-base mb-6">บอกต่อเพื่อน ครอบครัว และคนที่คุณรัก</p>
 
             <div className="flex flex-wrap justify-center gap-4">
               {/* Facebook Share */}
