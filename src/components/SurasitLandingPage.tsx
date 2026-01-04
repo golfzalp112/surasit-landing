@@ -982,7 +982,7 @@ const SurasitLandingPagePro = () => {
         <div className="max-w-7xl mx-auto">
           {/* P.S. Summary */}
           <div className="p-6 bg-white/5 rounded-2xl border border-white/10 mb-8">
-            <h4 className="text-cyan-400 font-bold mb-3">P.S. สรุปให้คุณ</h4>
+            <h4 className="text-cyan-400 font-bold mb-3">สรุปสำคัญ</h4>
             <ul className="text-blue-200 space-y-2 text-sm md:text-base">
               <li>• <span className="text-white font-semibold">สุรสิทธิ์ นิธิวุฒิวรรักษ์</span> — อดีต สส. นิ่ม ประสบการณ์ 40+ ปี เนติบัณฑิตไทย</li>
               <li>• <span className="text-white font-semibold">นโยบายเศรษฐกิจ 10 พลัส+</span> — 5 ทั่วถึง + 5 คุณภาพ แก้ปัญหาตรงจุด</li>
