@@ -441,30 +441,20 @@ const SurasitLandingPagePro = () => {
 
               {/* Attention-Grabbing Headline */}
               <h1 className={`text-2xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight transition-all duration-700 delay-100 ${heroLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                <span className="text-cyan-400">เบื่อไหม?</span>
+                <span className="text-cyan-400">เบื่อไหม?</span> ที่เลือกตั้งทีไร
                 <br className="md:hidden" />
-                <span className="hidden md:inline"> </span>ที่เลือกตั้งทีไร
-                <br className="md:hidden" />
-                <span className="hidden md:inline"> </span>ชีวิตก็ไม่เคยดีขึ้น...
+                ชีวิตก็ไม่เคยดีขึ้น...
               </h1>
 
               {/* Irresistible Intrigue */}
               <p className={`text-base md:text-xl lg:text-2xl text-blue-200 mb-6 leading-relaxed transition-all duration-700 delay-200 ${heroLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                ถ้าคุณรู้สึกว่า
-                <br className="md:hidden" />
-                <span className="text-white font-semibold">ค่าครองชีพแพงขึ้นทุกวัน</span>
-                <br className="md:hidden" />
-                แต่รายได้เท่าเดิม...
+                ถ้าคุณรู้สึกว่า <span className="text-white font-semibold">ค่าครองชีพแพงขึ้นทุกวัน</span> แต่รายได้เท่าเดิม...
                 <br />
                 <span className="text-cyan-400">คุณไม่ได้อยู่คนเดียว</span>
               </p>
 
               <p className={`text-base md:text-lg lg:text-xl text-blue-300 mb-8 transition-all duration-700 delay-300 ${heroLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                ผมเคยเป็น สส. มาแล้ว <span className="text-green-400 font-bold">40+ ปี</span>
-                <br className="md:hidden" />
-                และผมรู้ว่า
-                <br className="md:hidden" />
-                <span className="text-white font-semibold">ปัญหาจริงๆ ของคนชลบุรีคืออะไร...</span>
+                ผมเคยเป็น สส. มาแล้ว <span className="text-green-400 font-bold">40+ ปี</span> และผมรู้ว่า <span className="text-white font-semibold">ปัญหาจริงๆ ของคนชลบุรีคืออะไร...</span>
               </p>
 
               {/* Quick Stats with Counter Animation */}
@@ -533,11 +523,7 @@ const SurasitLandingPagePro = () => {
               ปัญหาที่คุณเจอทุกวัน
             </span>
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4">
-              <span className="text-red-400">6 ปัญหา</span>
-              <br className="md:hidden" />
-              ที่ทำให้ชีวิตคนชลบุรี
-              <br className="md:hidden" />
-              <span className="text-white">ยากลำบาก</span>
+              <span className="text-red-400">6 ปัญหา</span>ที่ทำให้ชีวิตคนชลบุรี<span className="text-white">ยากลำบาก</span>
             </h2>
             <p className="text-blue-300 text-base md:text-xl">คุณเจอปัญหาเหล่านี้ไหม?</p>
           </AnimateIn>
@@ -555,14 +541,10 @@ const SurasitLandingPagePro = () => {
 
           <div className="text-center mt-10">
             <p className="text-lg md:text-2xl text-white mb-2">
-              ถ้าคุณพยักหน้าอย่างน้อย
-              <br className="md:hidden" />
-              <span className="text-cyan-400 font-bold"> 1 ข้อ</span>...
+              ถ้าคุณพยักหน้าอย่างน้อย<span className="text-cyan-400 font-bold"> 1 ข้อ</span>...
             </p>
             <p className="text-base md:text-lg text-blue-300">
-              แสดงว่า
-              <br className="md:hidden" />
-              <span className="text-green-400 font-semibold">คุณต้องการคนที่แก้ปัญหาได้จริง!</span>
+              แสดงว่า<span className="text-green-400 font-semibold">คุณต้องการคนที่แก้ปัญหาได้จริง!</span>
             </p>
           </div>
         </div>
@@ -591,9 +573,7 @@ const SurasitLandingPagePro = () => {
               ทางออกที่คุณรอคอย
             </span>
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4">
-              นโยบาย
-              <br className="md:hidden" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">เศรษฐกิจ 10 พลัส+</span>
+              นโยบาย<span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">เศรษฐกิจ 10 พลัส+</span>
             </h2>
             <p className="text-blue-300 text-base md:text-xl">แก้ปัญหาตรงจุด <span className="text-green-400 font-semibold">เห็นผลจริง!</span></p>
             <p className="text-white mt-2 text-sm md:text-lg">5 ทั่วถึง + 5 คุณภาพ = ชีวิตดีขึ้นแน่นอน</p>
@@ -633,14 +613,10 @@ const SurasitLandingPagePro = () => {
               ทำไมต้อง &quot;สุรสิทธิ์&quot;?
             </span>
             <h2 className="text-2xl md:text-4xl font-bold mb-4">
-              ไม่ใช่<span className="text-cyan-400">หน้าใหม่</span>
-              <br className="md:hidden" />
-              ที่มาลองผิดลองถูก
+              ไม่ใช่<span className="text-cyan-400">หน้าใหม่</span>ที่มาลองผิดลองถูก
             </h2>
             <p className="text-blue-300 text-base md:text-lg">
-              แต่เป็นคนที่
-              <br className="md:hidden" />
-              <span className="text-white font-semibold">พิสูจน์ตัวเองมาแล้ว 40+ ปี</span>
+              แต่เป็นคนที่<span className="text-white font-semibold">พิสูจน์ตัวเองมาแล้ว 40+ ปี</span>
             </p>
           </AnimateIn>
 
@@ -700,14 +676,10 @@ const SurasitLandingPagePro = () => {
               ผลงานที่ผ่านมา
             </span>
             <h2 className="text-2xl md:text-4xl font-bold mb-4">
-              <span className="text-sky-400">&quot;พูดแล้วทำ&quot;</span>
-              <br className="md:hidden" />
-              ไม่ใช่แค่คำพูด
+              <span className="text-sky-400">&quot;พูดแล้วทำ&quot;</span> ไม่ใช่แค่คำพูด
             </h2>
             <p className="text-blue-300 text-base md:text-lg">
-              แต่เป็นสิ่งที่
-              <br className="md:hidden" />
-              <span className="text-white font-semibold">พิสูจน์มาแล้วตลอด 40 ปี</span>
+              แต่เป็นสิ่งที่<span className="text-white font-semibold">พิสูจน์มาแล้วตลอด 40 ปี</span>
             </p>
           </AnimateIn>
 
@@ -779,11 +751,7 @@ const SurasitLandingPagePro = () => {
           <AnimateIn animation="fadeUp" delay={300}>
             <div className="text-center mt-8">
               <p className="text-blue-300 text-base md:text-lg">
-                <span className="text-cyan-400 font-bold">&quot;อดีต สส. นิ่ม&quot;</span>
-                <br className="md:hidden" />
-                ประสบการณ์กว่า 40 ปี
-                <br className="md:hidden" />
-                พร้อมทำงานเพื่อชาวชลบุรี
+                <span className="text-cyan-400 font-bold">&quot;อดีต สส. นิ่ม&quot;</span> ประสบการณ์กว่า 40 ปี พร้อมทำงานเพื่อชาวชลบุรี
               </p>
             </div>
           </AnimateIn>
@@ -835,15 +803,11 @@ const SurasitLandingPagePro = () => {
               </div>
 
               <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4">
-                วันอาทิตย์ที่
-                <br className="md:hidden" />
-                8 กุมภาพันธ์ 2569
+                วันอาทิตย์ที่ 8 กุมภาพันธ์ 2569
               </h2>
               <p className="text-lg md:text-xl text-green-100 mb-2">เวลา 08.00 - 17.00 น.</p>
               <p className="text-base md:text-lg text-green-200 mb-8">
-                เลือก สส.เขต (สส.แบบแบ่งเขต)
-                <br className="md:hidden" />
-                <span className="font-bold">บัตรสีเขียว</span>
+                เลือก สส.เขต (สส.แบบแบ่งเขต) <span className="font-bold">บัตรสีเขียว</span>
               </p>
 
               {/* The Offer */}
@@ -937,22 +901,20 @@ const SurasitLandingPagePro = () => {
             </h2>
             <div className="text-base md:text-lg text-blue-200 space-y-2">
               <p><span className="text-red-400 mr-2">—</span>คุณจะ<span className="text-white font-semibold">เสียสิทธิ์ทางการเมือง</span></p>
-              <p><span className="text-red-400 mr-2">—</span>คุณจะ<span className="text-white font-semibold">ไม่มีสิทธิ์บ่น</span><br className="md:hidden" />ถ้าชีวิตไม่ดีขึ้น</p>
-              <p><span className="text-red-400 mr-2">—</span>คุณจะปล่อยให้<br className="md:hidden" /><span className="text-white font-semibold">คนอื่นเลือกอนาคตให้คุณ</span></p>
+              <p><span className="text-red-400 mr-2">—</span>คุณจะ<span className="text-white font-semibold">ไม่มีสิทธิ์บ่น</span>ถ้าชีวิตไม่ดีขึ้น</p>
+              <p><span className="text-red-400 mr-2">—</span>คุณจะปล่อยให้<span className="text-white font-semibold">คนอื่นเลือกอนาคตให้คุณ</span></p>
             </div>
           </AnimateIn>
 
           <AnimateIn animation="scale" delay={200}>
             <div className="p-6 md:p-8 bg-gradient-to-br from-green-600/20 to-blue-600/20 rounded-3xl border border-green-500/30">
               <h3 className="text-xl md:text-3xl font-bold mb-4">
-                แต่ถ้าคุณ<span className="text-green-400">ไปเลือกตั้ง</span>
-                <br className="md:hidden" />
-                และ<span className="text-cyan-400">กาเบอร์ 8</span>
+                แต่ถ้าคุณ<span className="text-green-400">ไปเลือกตั้ง</span>และ<span className="text-cyan-400">กาเบอร์ 8</span>
               </h3>
               <div className="text-base md:text-lg text-blue-200 space-y-2 mb-6">
-                <p><span className="text-green-400 mr-2">+</span>คุณจะได้ผู้แทนที่<br className="md:hidden" /><span className="text-white font-semibold">ทำงานจริง พิสูจน์มาแล้ว 40 ปี</span></p>
-                <p><span className="text-green-400 mr-2">+</span>คุณจะได้นโยบาย<br className="md:hidden" /><span className="text-white font-semibold">เศรษฐกิจ 10 พลัส+</span> ที่ช่วยคุณได้จริง</p>
-                <p><span className="text-green-400 mr-2">+</span>คุณจะมีส่วนร่วมในการ<br className="md:hidden" /><span className="text-white font-semibold">เปลี่ยนแปลงชลบุรี</span>ให้ดีขึ้น</p>
+                <p><span className="text-green-400 mr-2">+</span>คุณจะได้ผู้แทนที่<span className="text-white font-semibold">ทำงานจริง พิสูจน์มาแล้ว 40 ปี</span></p>
+                <p><span className="text-green-400 mr-2">+</span>คุณจะได้นโยบาย<span className="text-white font-semibold">เศรษฐกิจ 10 พลัส+</span> ที่ช่วยคุณได้จริง</p>
+                <p><span className="text-green-400 mr-2">+</span>คุณจะมีส่วนร่วมในการ<span className="text-white font-semibold">เปลี่ยนแปลงชลบุรี</span>ให้ดีขึ้น</p>
               </div>
 
               <button
@@ -973,9 +935,7 @@ const SurasitLandingPagePro = () => {
         <div className="max-w-4xl mx-auto text-center">
           <AnimateIn animation="fadeUp">
             <h3 className="text-lg md:text-2xl font-bold mb-4">
-              ช่วยกันแชร์ให้เพื่อน
-              <br className="md:hidden" />
-              <span className="text-cyan-400">ชาวชลบุรี</span>รู้จัก
+              ช่วยกันแชร์ให้เพื่อน<span className="text-cyan-400">ชาวชลบุรี</span>รู้จัก
             </h3>
             <p className="text-blue-300 text-sm md:text-base mb-6">บอกต่อเพื่อน ครอบครัว และคนที่คุณรัก</p>
 
