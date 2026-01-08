@@ -444,7 +444,7 @@ const SurasitLandingPagePro = () => {
           </AnimateIn>
 
           <AnimateIn animation="scale">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-blue-500/20 border border-white/10 aspect-video">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-blue-500/20 border border-white/10 aspect-[9/16] max-w-sm mx-auto">
               <iframe
                 src="https://drive.google.com/file/d/1LolKALUy_1NAtZU-JhqE1EjmMHrlj5y2/preview"
                 className="w-full h-full"
