@@ -40,11 +40,10 @@ src/
 ### Key Patterns
 
 - **Single-page app**: All sections are in `SurasitLandingPage.tsx` with smooth scroll navigation
-- **Client component**: Uses `"use client"` directive for interactivity (scroll tracking, counters, lightbox)
-- **Custom hooks**:
-  - `useInView`: IntersectionObserver for scroll-triggered animations
-  - `useCountUp`: Animated number counter with easing
-- **Animation components**: `AnimateIn` and `StaggerIn` for reveal animations
+- **Client component**: Uses `"use client"` directive for interactivity (scroll tracking, lightbox, countdown)
+- **Custom hook**: `useInView` - IntersectionObserver for scroll-triggered animations
+- **Animation component**: `AnimateIn` wraps content with fade/scale/slide reveal effects
+- **Inline CSS keyframes**: Animations (`float`, `slideDown`, `floatRotate`, `spin`, `marquee`) defined in component's `<style>` tag
 - **Path alias**: `@/*` maps to `./src/*`
 
 ### Static Assets
