@@ -70,6 +70,7 @@ const SurasitLandingPagePro = () => {
   const [activeSection, setActiveSection] = useState('hero');
   const [heroLoaded, setHeroLoaded] = useState(false);
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
+  const [videoClicked, setVideoClicked] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
   const navItemRefs = useRef<Record<string, HTMLButtonElement | null>>({});
   const prevSectionRef = useRef('hero');
@@ -408,12 +409,12 @@ const SurasitLandingPagePro = () => {
               <div className="relative">
                 {/* Orbiting Rings */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-64 md:w-80 h-64 md:h-80 border-2 border-blue-500/30 rounded-full" style={{ animation: 'spin 20s linear infinite' }} />
-                  <div className="absolute w-56 md:w-72 h-56 md:h-72 border border-green-500/20 rounded-full" style={{ animation: 'spin 15s linear infinite reverse' }} />
+                  <div className="w-72 md:w-96 h-72 md:h-96 border-2 border-blue-500/30 rounded-full" style={{ animation: 'spin 20s linear infinite' }} />
+                  <div className="absolute w-64 md:w-80 h-64 md:h-80 border border-green-500/20 rounded-full" style={{ animation: 'spin 15s linear infinite reverse' }} />
                 </div>
 
                 {/* Main Card */}
-                <div className="relative w-72 md:w-96 h-80 md:h-[28rem] overflow-hidden hover:scale-105 transition-transform">
+                <div className="relative w-80 md:w-[28rem] h-96 md:h-[34rem] overflow-hidden hover:scale-105 transition-transform">
                   <Image
                     src="/baner.png"
                     alt="สุรสิทธิ์ นิธิวุฒิวรรักษ์"
@@ -444,10 +445,13 @@ const SurasitLandingPagePro = () => {
           </AnimateIn>
 
           <AnimateIn animation="scale">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-blue-500/20 border border-white/10 aspect-[9/16] max-w-sm mx-auto">
+            <div
+              className="relative rounded-2xl overflow-hidden shadow-2xl shadow-blue-500/20 border border-white/10 aspect-[9/16] max-w-sm mx-auto cursor-pointer"
+              onClick={() => setVideoClicked(true)}
+            >
               <iframe
                 src="https://drive.google.com/file/d/1LolKALUy_1NAtZU-JhqE1EjmMHrlj5y2/preview"
-                className="w-full h-full"
+                className={`w-full h-full ${videoClicked ? 'pointer-events-auto' : 'pointer-events-none'}`}
                 allow="autoplay; encrypted-media"
                 allowFullScreen
               />
@@ -1020,10 +1024,15 @@ const SurasitLandingPagePro = () => {
         {/* Vote Button */}
         <button
           onClick={() => scrollToSection('vote')}
-          className="flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full font-bold shadow-2xl shadow-green-500/40 hover:scale-110 transition-transform animate-pulse"
+          className="w-16 h-20 rounded-2xl overflow-hidden shadow-2xl shadow-green-500/40 hover:scale-110 transition-transform"
         >
-          <span className="text-2xl font-black">8</span>
-          <span className="text-sm">กุมภา กาเบอร์ 8</span>
+          <Image
+            src="/baner.png"
+            alt="กาเบอร์ 8"
+            width={64}
+            height={80}
+            className="w-full h-full object-cover"
+          />
         </button>
       </div>
 

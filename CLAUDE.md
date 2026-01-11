@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Next.js 16 political campaign landing page for "สุรสิทธิ์ นิธิวุฒิวรรักษ์" (Surasit Nithiwuttiwarak), a candidate for Member of Parliament in Chonburi District 6, Thailand. The site is a Thai-language single-page application.
+Next.js 16 political campaign landing page for "สุรสิทธิ์ นิธิวุฒิวรรักษ์" (Surasit Nithiwuttiwarak), MP candidate for Chonburi District 6, Thailand. Thai-language single-page application.
 
 ## Commands
 
@@ -19,7 +19,7 @@ npm run lint    # Run ESLint (eslint-config-next with core-web-vitals + TypeScri
 
 - **Framework**: Next.js 16.1.1 with App Router
 - **React**: 19.2.3
-- **Styling**: Tailwind CSS 4 (via @tailwindcss/postcss)
+- **Styling**: Tailwind CSS 4 (v4 syntax with `@import "tailwindcss"` and `@theme inline`)
 - **Language**: TypeScript (strict mode)
 
 ## Architecture
@@ -29,29 +29,30 @@ npm run lint    # Run ESLint (eslint-config-next with core-web-vitals + TypeScri
 ```
 src/
 ├── app/
-│   ├── layout.tsx      # Root layout with metadata (Thai language)
+│   ├── layout.tsx      # Root layout with Thai metadata (lang="th")
 │   ├── page.tsx        # Entry point, renders SurasitLandingPagePro
-│   ├── globals.css     # Tailwind imports and CSS variables
+│   ├── globals.css     # Tailwind v4 imports and CSS variables
 │   └── favicon.ico
 └── components/
-    └── SurasitLandingPage.tsx  # Main component (~1200 lines)
+    └── SurasitLandingPage.tsx  # Main component (~1150 lines)
 ```
 
 ### Key Patterns
 
-- **Single-page app**: All sections are in `SurasitLandingPage.tsx` with smooth scroll navigation
-- **Client component**: Uses `"use client"` directive for interactivity (scroll tracking, lightbox, countdown)
+- **Single-page app**: All sections in `SurasitLandingPage.tsx` with smooth scroll navigation between sections (hero, problems, solutions, credentials, track-record, vote, area)
+- **Client component**: Uses `"use client"` directive for interactivity (scroll tracking, lightbox, countdown timer)
 - **Custom hook**: `useInView` - IntersectionObserver for scroll-triggered animations
-- **Animation component**: `AnimateIn` wraps content with fade/scale/slide reveal effects
+- **Animation component**: `AnimateIn` wraps content with fade/scale/slide reveal effects (fadeUp, fadeLeft, fadeRight, scale, flip)
 - **Inline CSS keyframes**: Animations (`float`, `slideDown`, `floatRotate`, `spin`, `marquee`) defined in component's `<style>` tag
 - **Path alias**: `@/*` maps to `./src/*`
 
 ### Static Assets
 
-Images are served from `/public/` and referenced directly (e.g., `/logo.jpg`, `/baner.jpg`, `/sura1.png`).
+Images served from `/public/` and referenced directly (e.g., `/logo.jpg`, `/baner.png`, `/sura1.png`, `/qr.jpg`).
 
 ## Notes
 
-- Thai language throughout - metadata, content, and comments
-- Deployed to Vercel (references `surasit-landing.vercel.app`)
+- Thai language throughout - metadata, content, and Thai comments in code
+- Deployed to Vercel (`surasit-landing.vercel.app`)
 - Election date hardcoded as February 8, 2026 (Buddhist Era 2569)
+- External integrations: Google Drive video embed, LINE Official Account, Facebook share
