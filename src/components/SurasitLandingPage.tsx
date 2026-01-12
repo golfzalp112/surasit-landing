@@ -78,9 +78,9 @@ const SurasitLandingPagePro = () => {
 
   const navItems = [
     { id: 'hero', label: 'หน้าแรก' },
-    { id: 'problems', label: 'ปัญหา' },
-    { id: 'solutions', label: 'นโยบาย' },
     { id: 'credentials', label: 'ประวัติ' },
+    { id: 'gallery', label: 'รูปภาพ' },
+    { id: 'solutions', label: 'นโยบาย' },
     { id: 'track-record', label: 'ผลงาน' },
     { id: 'vote', label: 'เลือกตั้ง' },
     { id: 'area', label: 'พื้นที่' },
@@ -102,7 +102,7 @@ const SurasitLandingPagePro = () => {
       setShowBackToTop(window.scrollY > 500);
 
       // Update active section
-      const sections = ['hero', 'problems', 'solutions', 'credentials', 'track-record', 'vote', 'area'];
+      const sections = ['hero', 'credentials', 'gallery', 'solutions', 'track-record', 'vote', 'area'];
       for (const section of sections.reverse()) {
         const element = document.getElementById(section);
         if (element) {
@@ -393,7 +393,7 @@ const SurasitLandingPagePro = () => {
               {/* CTA Button */}
               <div className={`transition-all duration-700 delay-500 ${heroLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                 <button
-                  onClick={() => scrollToSection('problems')}
+                  onClick={() => scrollToSection('credentials')}
                   className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full font-bold hover:scale-105 transition-transform shadow-lg shadow-cyan-500/30"
                 >
                   <span>ดูว่าผมจะช่วยคุณได้ยังไง</span>
@@ -430,115 +430,6 @@ const SurasitLandingPagePro = () => {
         </div>
       </section>
 
-      {/* ==================== */}
-      {/* VIDEO SECTION */}
-      {/* ==================== */}
-      <section className="py-16 md:py-20 px-4 md:px-6">
-        <div className="max-w-4xl mx-auto">
-          <AnimateIn animation="fadeUp" className="text-center mb-8">
-            <span className="inline-block px-4 py-2 bg-cyan-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm md:text-base mb-4">
-              แนะนำตัวผู้สมัคร
-            </span>
-            <h2 className="text-2xl md:text-4xl font-bold mb-4">
-              รู้จัก<span className="text-cyan-400">พี่นิ่ม สุรสิทธิ์</span>
-            </h2>
-          </AnimateIn>
-
-          <AnimateIn animation="scale">
-            <div
-              className="relative rounded-2xl overflow-hidden shadow-2xl shadow-blue-500/20 border border-white/10 aspect-[9/16] max-w-sm mx-auto cursor-pointer"
-              onClick={() => setVideoClicked(true)}
-            >
-              <iframe
-                src="https://drive.google.com/file/d/1LolKALUy_1NAtZU-JhqE1EjmMHrlj5y2/preview"
-                className={`w-full h-full ${videoClicked ? 'pointer-events-auto' : 'pointer-events-none'}`}
-                allow="autoplay; encrypted-media"
-                allowFullScreen
-              />
-            </div>
-          </AnimateIn>
-        </div>
-      </section>
-
-      {/* ==================== */}
-      {/* DISTRICT 6 AREAS SECTION */}
-      {/* ==================== */}
-      <section id="problems" className="py-16 md:py-20 px-4 md:px-6 bg-gradient-to-b from-blue-900/30 to-transparent">
-        <div className="max-w-7xl mx-auto">
-          <AnimateIn animation="fadeUp" className="text-center mb-12">
-            <span className="inline-block px-4 py-2 bg-blue-500/20 border border-blue-500/30 rounded-full text-blue-400 text-sm md:text-base mb-4">
-              พื้นที่เขตเลือกตั้ง
-            </span>
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4">
-              <span className="text-cyan-400">5 พื้นที่</span>เขต 6 ของเรา <span className="text-green-400">มีคุณภาพชีวิตที่ดี</span>
-            </h2>
-          </AnimateIn>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-            {district6Areas.map((item, i) => (
-              <AnimateIn key={i} animation="scale" delay={i * 100}>
-                <div className="group p-6 bg-blue-900/30 rounded-2xl border border-blue-500/20 hover:border-cyan-500/50 hover:bg-blue-900/50 transition-all hover:-translate-y-1 h-full text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-cyan-400/50 mb-3">{item.num}</div>
-                  <p className="text-white font-bold text-lg md:text-xl">{item.name}</p>
-                </div>
-              </AnimateIn>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Transition Banner */}
-      <section className="py-8 md:py-12 bg-[#1e3a5f]">
-        <div className="max-w-4xl mx-auto px-4">
-          <Image
-            src="/gener.png"
-            alt="เคียงข้างประชาชน ก้าวไปด้วยกันทุก GENERATION"
-            width={1200}
-            height={400}
-            className="w-full h-auto"
-          />
-        </div>
-      </section>
-
-      {/* ==================== */}
-      {/* SOLUTIONS SECTION */}
-      {/* ==================== */}
-      <section id="solutions" className="py-16 md:py-20 px-4 md:px-6">
-        <div className="max-w-7xl mx-auto">
-          <AnimateIn animation="fadeUp" className="text-center mb-12">
-            <span className="inline-block px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-full text-green-400 text-sm md:text-base mb-4">
-              ทางออกที่คุณรอคอย
-            </span>
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4">
-              นโยบาย<span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">เศรษฐกิจ 10 พลัส+</span>
-            </h2>
-            <p className="text-blue-300 text-base md:text-xl">แก้ปัญหาตรงจุด <span className="text-green-400 font-semibold">เห็นผลจริง!</span></p>
-            <p className="text-white mt-2 text-sm md:text-lg">5 ทั่วถึง + 5 คุณภาพ = ชีวิตดีขึ้นแน่นอน</p>
-          </AnimateIn>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
-            {solutions.map((item, i) => (
-              <AnimateIn key={i} animation="fadeUp" delay={i * 80}>
-                <div
-                  onClick={() => setActivePolicy(activePolicy === i ? null : i)}
-                  className={`group relative p-5 md:p-6 rounded-2xl border transition-all cursor-pointer overflow-hidden h-full ${
-                    activePolicy === i
-                      ? 'bg-green-600/30 border-green-400/50 scale-105'
-                      : 'bg-white/5 border-white/10 hover:border-green-500/30 hover:bg-white/10'
-                  }`}
-                >
-                  <div className="text-2xl md:text-3xl font-bold text-green-400/50 mb-2">{item.num}</div>
-                  <h4 className="font-bold text-base md:text-lg mb-2">{item.title}</h4>
-                  <p className="text-sm md:text-base text-blue-200/80 mb-3">{item.desc}</p>
-                  <div className={`text-sm p-2 rounded-lg transition-all ${activePolicy === i ? 'bg-green-500/20 text-green-300 opacity-100' : 'opacity-0 h-0 overflow-hidden sm:opacity-100 sm:h-auto bg-green-500/10 text-green-400'}`}>
-                    <span className="font-semibold">ผลลัพธ์:</span> {item.result}
-                  </div>
-                </div>
-              </AnimateIn>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ==================== */}
       {/* CREDENTIALS SECTION */}
@@ -566,14 +457,9 @@ const SurasitLandingPagePro = () => {
                 </h3>
                 <div className="space-y-4">
                   {credentials.map((item, i) => (
-                    <div key={i} className="flex items-start gap-4 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-all">
-                      <div className="w-10 h-10 bg-cyan-500/20 rounded-lg flex items-center justify-center text-cyan-400 font-bold text-sm flex-shrink-0">
-                        {String(i + 1).padStart(2, '0')}
-                      </div>
-                      <div>
-                        <div className="font-semibold text-base md:text-lg text-cyan-400">{item.title}</div>
-                        <div className="text-sm md:text-base text-blue-200">{item.desc}</div>
-                      </div>
+                    <div key={i} className="p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-all">
+                      <div className="font-semibold text-base md:text-lg text-cyan-400">{item.title}</div>
+                      <div className="text-sm md:text-base text-blue-200">{item.desc}</div>
                     </div>
                   ))}
                 </div>
@@ -604,50 +490,9 @@ const SurasitLandingPagePro = () => {
       </section>
 
       {/* ==================== */}
-      {/* TRACK RECORD SECTION */}
-      {/* ==================== */}
-      <section id="track-record" className="py-16 md:py-20 px-4 md:px-6">
-        <div className="max-w-7xl mx-auto">
-          <AnimateIn animation="fadeUp" className="text-center mb-12">
-            <span className="inline-block px-4 py-2 bg-sky-500/20 border border-sky-500/30 rounded-full text-sky-400 text-sm md:text-base mb-4">
-              ผลงานที่ผ่านมา
-            </span>
-            <h2 className="text-2xl md:text-4xl font-bold mb-4">
-              <span className="text-sky-400">&quot;พูดแล้วทำ&quot;</span> <span className="text-green-400">พลัส</span>
-            </h2>
-            <p className="text-blue-300 text-base md:text-lg">
-              <span className="text-white font-semibold">คนพื้นที่ เข้าใจปัญหา พร้อมรับฟัง และทำทันที</span>
-            </p>
-          </AnimateIn>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {trackRecords.map((item, i) => (
-              <AnimateIn key={i} animation="scale" delay={i * 150}>
-                <div className="group p-6 bg-gradient-to-br from-sky-900/30 to-blue-900/30 rounded-2xl border border-sky-500/20 hover:border-sky-500/50 transition-all hover:-translate-y-2 h-full">
-                  <div className="text-3xl md:text-4xl font-bold text-sky-400/50 mb-4">{item.num}</div>
-                  <h4 className="font-bold text-lg md:text-xl mb-2">{item.title}</h4>
-                  <p className="text-sm md:text-base text-blue-200/70">{item.desc}</p>
-                </div>
-              </AnimateIn>
-            ))}
-          </div>
-
-          <AnimateIn animation="fadeUp" delay={200}>
-            <div className="mt-12 p-8 bg-white/5 rounded-3xl border border-white/10 text-center">
-              <div className="text-5xl font-serif text-white/20 mb-4">&quot;</div>
-              <blockquote className="text-xl md:text-2xl lg:text-3xl font-medium text-white mb-4 leading-relaxed">
-                เรามาร่วม<span className="text-cyan-400">เปลี่ยนศรีราชา</span>ให้ดีขึ้นกว่าเดิม <span className="text-green-400">ไปด้วยกันครับ</span>
-              </blockquote>
-              <cite className="text-blue-300 text-base md:text-lg">— สุรสิทธิ์ นิธิวุฒิวรรักษ์</cite>
-            </div>
-          </AnimateIn>
-        </div>
-      </section>
-
-      {/* ==================== */}
       {/* GALLERY SECTION */}
       {/* ==================== */}
-      <section className="py-16 md:py-20 px-4 md:px-6 bg-gradient-to-b from-blue-900/20 to-transparent">
+      <section id="gallery" className="py-16 md:py-20 px-4 md:px-6 bg-gradient-to-b from-blue-900/20 to-transparent">
         <div className="max-w-6xl mx-auto">
           <AnimateIn animation="fadeUp" className="text-center mb-12">
             <span className="inline-block px-6 py-3 bg-blue-500/20 border border-blue-500/30 rounded-full text-blue-400 text-lg font-semibold mb-4">
@@ -690,6 +535,85 @@ const SurasitLandingPagePro = () => {
               <p className="text-blue-300 text-base md:text-lg">
                 <span className="text-cyan-400 font-bold">&quot;อดีต สส. นิ่ม&quot;</span> ประสบการณ์กว่า 40 ปี พร้อมทำงานเพื่อชาวชลบุรี
               </p>
+            </div>
+          </AnimateIn>
+        </div>
+      </section>
+
+      {/* ==================== */}
+      {/* SOLUTIONS SECTION */}
+      {/* ==================== */}
+      <section id="solutions" className="py-16 md:py-20 px-4 md:px-6">
+        <div className="max-w-7xl mx-auto">
+          <AnimateIn animation="fadeUp" className="text-center mb-12">
+            <span className="inline-block px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-full text-green-400 text-sm md:text-base mb-4">
+              ทางออกที่คุณรอคอย
+            </span>
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4">
+              นโยบาย<span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">เศรษฐกิจ 10 พลัส+</span>
+            </h2>
+            <p className="text-blue-300 text-base md:text-xl">แก้ตรงจุด <span className="text-green-400 font-semibold">เห็นผลจริง!</span></p>
+            <p className="text-white mt-2 text-sm md:text-lg">5 ทั่วถึง + 5 คุณภาพ = ชีวิตดีขึ้นแน่นอน</p>
+          </AnimateIn>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
+            {solutions.map((item, i) => (
+              <AnimateIn key={i} animation="fadeUp" delay={i * 80}>
+                <div
+                  onClick={() => setActivePolicy(activePolicy === i ? null : i)}
+                  className={`group relative p-5 md:p-6 rounded-2xl border transition-all cursor-pointer overflow-hidden h-full ${
+                    activePolicy === i
+                      ? 'bg-green-600/30 border-green-400/50 scale-105'
+                      : 'bg-white/5 border-white/10 hover:border-green-500/30 hover:bg-white/10'
+                  }`}
+                >
+                  <h4 className="font-bold text-base md:text-lg mb-2">{item.title}</h4>
+                  <p className="text-sm md:text-base text-blue-200/80 mb-3">{item.desc}</p>
+                  <div className={`text-sm p-2 rounded-lg transition-all ${activePolicy === i ? 'bg-green-500/20 text-green-300 opacity-100' : 'opacity-0 h-0 overflow-hidden sm:opacity-100 sm:h-auto bg-green-500/10 text-green-400'}`}>
+                    <span className="font-semibold">ผลลัพธ์:</span> {item.result}
+                  </div>
+                </div>
+              </AnimateIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ==================== */}
+      {/* TRACK RECORD SECTION */}
+      {/* ==================== */}
+      <section id="track-record" className="py-16 md:py-20 px-4 md:px-6">
+        <div className="max-w-7xl mx-auto">
+          <AnimateIn animation="fadeUp" className="text-center mb-12">
+            <span className="inline-block px-4 py-2 bg-sky-500/20 border border-sky-500/30 rounded-full text-sky-400 text-sm md:text-base mb-4">
+              ผลงานที่ผ่านมา
+            </span>
+            <h2 className="text-2xl md:text-4xl font-bold mb-4">
+              <span className="text-sky-400">&quot;พูดแล้วทำ&quot;</span> <span className="text-green-400">พลัส</span>
+            </h2>
+            <p className="text-blue-300 text-base md:text-lg">
+              <span className="text-white font-semibold">คนพื้นที่ เข้าใจ พร้อมรับฟัง และทำทันที</span>
+            </p>
+          </AnimateIn>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {trackRecords.map((item, i) => (
+              <AnimateIn key={i} animation="scale" delay={i * 150}>
+                <div className="group p-6 bg-gradient-to-br from-sky-900/30 to-blue-900/30 rounded-2xl border border-sky-500/20 hover:border-sky-500/50 transition-all hover:-translate-y-2 h-full">
+                  <h4 className="font-bold text-lg md:text-xl mb-2">{item.title}</h4>
+                  <p className="text-sm md:text-base text-blue-200/70">{item.desc}</p>
+                </div>
+              </AnimateIn>
+            ))}
+          </div>
+
+          <AnimateIn animation="fadeUp" delay={200}>
+            <div className="mt-12 p-8 bg-white/5 rounded-3xl border border-white/10 text-center">
+              <div className="text-5xl font-serif text-white/20 mb-4">&quot;</div>
+              <blockquote className="text-xl md:text-2xl lg:text-3xl font-medium text-white mb-4 leading-relaxed">
+                เรามาร่วม<span className="text-cyan-400">สร้างศรีราชา</span> <span className="text-green-400">ไปด้วยกันครับ</span>
+              </blockquote>
+              <cite className="text-blue-300 text-base md:text-lg">— สุรสิทธิ์ นิธิวุฒิวรรักษ์</cite>
             </div>
           </AnimateIn>
         </div>
@@ -747,28 +671,6 @@ const SurasitLandingPagePro = () => {
                 เลือก สส.เขต (สส.แบบแบ่งเขต) <span className="font-bold">บัตรสีเขียว</span>
               </p>
 
-              {/* The Offer */}
-              <div className="bg-white/20 backdrop-blur-xl rounded-2xl p-6 md:p-8 mb-8">
-                <p className="text-lg mb-4">สิ่งที่คุณจะได้รับเมื่อเลือก <span className="font-bold text-cyan-300">เบอร์ 8</span>:</p>
-                <div className="grid md:grid-cols-3 gap-4 text-left">
-                  <div className="p-4 bg-white/10 rounded-xl">
-                    <div className="w-8 h-8 bg-green-500/30 rounded-full flex items-center justify-center text-green-300 font-bold mb-2">1</div>
-                    <div className="font-semibold">ผู้แทนที่มีประสบการณ์</div>
-                    <div className="text-sm text-green-200">อดีต สส. สว.</div>
-                  </div>
-                  <div className="p-4 bg-white/10 rounded-xl">
-                    <div className="w-8 h-8 bg-green-500/30 rounded-full flex items-center justify-center text-green-300 font-bold mb-2">2</div>
-                    <div className="font-semibold">นโยบายที่ทำได้จริง</div>
-                    <div className="text-sm text-green-200">เศรษฐกิจ 10 พลัส+</div>
-                  </div>
-                  <div className="p-4 bg-white/10 rounded-xl">
-                    <div className="w-8 h-8 bg-green-500/30 rounded-full flex items-center justify-center text-green-300 font-bold mb-2">3</div>
-                    <div className="font-semibold">คนที่รู้จักพื้นที่</div>
-                    <div className="text-sm text-green-200">ลูกหลานชลบุรีแท้ๆ</div>
-                  </div>
-                </div>
-              </div>
-
               {/* CTA */}
               <div className="text-2xl md:text-3xl font-bold mb-4">
                 8 กุมภา กาเบอร์ <span className="text-cyan-300">8</span>
@@ -806,9 +708,6 @@ const SurasitLandingPagePro = () => {
             {areas.map((area, i) => (
               <AnimateIn key={i} animation={i === 0 ? "fadeLeft" : "fadeRight"}>
                 <div className="group p-6 md:p-8 bg-white/5 rounded-3xl border border-white/10 hover:border-blue-500/50 hover:bg-white/10 transition-all h-full">
-                  <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center text-blue-400 font-bold mb-4">
-                    {String(i + 1).padStart(2, '0')}
-                  </div>
                   <h3 className="text-xl md:text-2xl font-bold text-white mb-4">{area.name}</h3>
                   <div className="flex flex-wrap gap-2">
                     {area.tambons.map((tambon, j) => (
@@ -824,46 +723,6 @@ const SurasitLandingPagePro = () => {
         </div>
       </section>
 
-      {/* ==================== */}
-      {/* WARNING SECTION */}
-      {/* ==================== */}
-      <section className="py-16 md:py-20 px-4 md:px-6 bg-gradient-to-b from-red-950/20 to-blue-950">
-        <div className="max-w-4xl mx-auto text-center">
-          <AnimateIn animation="fadeUp" className="mb-8">
-            <span className="inline-block px-6 py-3 md:px-8 md:py-4 bg-red-500/30 border-2 border-red-400/50 rounded-full text-red-300 text-lg md:text-2xl font-bold mb-6 shadow-lg shadow-red-500/20 animate-pulse">
-              คำเตือน
-            </span>
-            <h2 className="text-xl md:text-3xl font-bold mb-4">
-              ถ้าคุณ<span className="text-red-400">ไม่ไปเลือกตั้ง</span>...
-            </h2>
-            <div className="text-base md:text-lg text-blue-200 space-y-2">
-              <p><span className="text-red-400 mr-2">—</span>คุณจะ<span className="text-white font-semibold">เสียสิทธิ์ทางการเมือง</span></p>
-              <p><span className="text-red-400 mr-2">—</span>คุณจะ<span className="text-white font-semibold">ไม่มีสิทธิ์บ่น</span>ถ้าชีวิตไม่ดีขึ้น</p>
-              <p><span className="text-red-400 mr-2">—</span>คุณจะปล่อยให้<span className="text-white font-semibold">คนอื่นเลือกอนาคตให้คุณ</span></p>
-            </div>
-          </AnimateIn>
-
-          <AnimateIn animation="scale" delay={200}>
-            <div className="p-6 md:p-8 bg-gradient-to-br from-green-600/20 to-blue-600/20 rounded-3xl border border-green-500/30">
-              <h3 className="text-xl md:text-3xl font-bold mb-4">
-                แต่ถ้าคุณ<span className="text-green-400">ไปเลือกตั้ง</span>และ<span className="text-cyan-400">กาเบอร์ 8</span>
-              </h3>
-              <div className="text-base md:text-lg text-blue-200 space-y-2 mb-6">
-                <p><span className="text-green-400 mr-2">+</span>คุณจะได้ผู้แทนที่<span className="text-white font-semibold">ทำงานจริง พิสูจน์มาแล้ว 40 ปี</span></p>
-                <p><span className="text-green-400 mr-2">+</span>คุณจะได้นโยบาย<span className="text-white font-semibold">เศรษฐกิจ 10 พลัส+</span> ที่ช่วยคุณได้จริง</p>
-                <p><span className="text-green-400 mr-2">+</span>คุณจะมีส่วนร่วมในการ<span className="text-white font-semibold">เปลี่ยนแปลงชลบุรี</span>ให้ดีขึ้น</p>
-              </div>
-
-              <button
-                onClick={() => scrollToSection('vote')}
-                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-lg shadow-green-500/30"
-              >
-                <span>จำไว้! 8 ก.พ. 69 กาเบอร์ 8</span>
-              </button>
-            </div>
-          </AnimateIn>
-        </div>
-      </section>
 
       {/* ==================== */}
       {/* SHARE SECTION */}
@@ -926,17 +785,6 @@ const SurasitLandingPagePro = () => {
       {/* ==================== */}
       <footer className="py-12 px-4 md:px-6 border-t border-white/10 bg-blue-950">
         <div className="max-w-7xl mx-auto">
-          {/* P.S. Summary */}
-          <div className="p-6 bg-white/5 rounded-2xl border border-white/10 mb-8">
-            <h4 className="text-cyan-400 font-bold mb-3">สรุปสำคัญ</h4>
-            <ul className="text-blue-200 space-y-2 text-sm md:text-base">
-              <li>• <span className="text-white font-semibold">สุรสิทธิ์ นิธิวุฒิวรรักษ์</span> — อดีต สส. นิ่ม ประสบการณ์ 40+ ปี เนติบัณฑิตไทย</li>
-              <li>• <span className="text-white font-semibold">นโยบายเศรษฐกิจ 10 พลัส+</span> — 5 ทั่วถึง + 5 คุณภาพ แก้ปัญหาตรงจุด</li>
-              <li>• <span className="text-white font-semibold">พื้นที่:</span> อ.เกาะสีชัง + อ.ศรีราชา (ต.บางพระ, ต.ศรีราชา, ต.สุรศักดิ์, ต.ทุ่งสุขลา)</li>
-              <li>• <span className="text-green-400 font-bold">วันเลือกตั้ง:</span> 8 กุมภาพันธ์ 2569 | 08.00-17.00 น. | <span className="text-cyan-400 font-bold">บัตรสีเขียว กาเบอร์ 8</span></li>
-            </ul>
-          </div>
-
           {/* Footer Info */}
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center gap-4">

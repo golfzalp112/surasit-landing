@@ -39,11 +39,12 @@ src/
 
 ### Key Patterns
 
-- **Single-page app**: All sections in `SurasitLandingPage.tsx` with smooth scroll navigation between sections (hero, problems, solutions, credentials, track-record, vote, area)
+- **Single-page app**: All sections in `SurasitLandingPage.tsx` (exported as `SurasitLandingPagePro`) with smooth scroll navigation between sections (hero, problems, solutions, credentials, track-record, vote, area)
 - **Client component**: Uses `"use client"` directive for interactivity (scroll tracking, lightbox, countdown timer)
 - **Custom hook**: `useInView` - IntersectionObserver for scroll-triggered animations
 - **Animation component**: `AnimateIn` wraps content with fade/scale/slide reveal effects (fadeUp, fadeLeft, fadeRight, scale, flip)
 - **Inline CSS keyframes**: Animations (`float`, `slideDown`, `floatRotate`, `spin`, `marquee`) defined in component's `<style>` tag
+- **Font**: Prompt (Thai font) loaded via Google Fonts in component's inline `<style>` tag
 - **Path alias**: `@/*` maps to `./src/*`
 
 ### Static Assets
