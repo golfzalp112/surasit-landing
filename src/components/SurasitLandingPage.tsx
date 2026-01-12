@@ -79,7 +79,6 @@ const SurasitLandingPagePro = () => {
   const navItems = [
     { id: 'hero', label: 'หน้าแรก' },
     { id: 'credentials', label: 'ประวัติ' },
-    { id: 'generation', label: 'เคียงข้าง' },
     { id: 'vote', label: 'เลือกตั้ง' },
     { id: 'area', label: 'พื้นที่' },
     { id: 'track-record', label: 'ผลงาน' },
@@ -103,7 +102,7 @@ const SurasitLandingPagePro = () => {
       setShowBackToTop(window.scrollY > 500);
 
       // Update active section
-      const sections = ['hero', 'credentials', 'generation', 'vote', 'area', 'track-record', 'solutions', 'gallery'];
+      const sections = ['hero', 'credentials', 'vote', 'area', 'track-record', 'solutions', 'gallery'];
       for (const section of sections.reverse()) {
         const element = document.getElementById(section);
         if (element) {
