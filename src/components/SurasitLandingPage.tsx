@@ -79,11 +79,12 @@ const SurasitLandingPagePro = () => {
   const navItems = [
     { id: 'hero', label: 'หน้าแรก' },
     { id: 'credentials', label: 'ประวัติ' },
-    { id: 'gallery', label: 'รูปภาพ' },
-    { id: 'solutions', label: 'นโยบาย' },
-    { id: 'track-record', label: 'ผลงาน' },
+    { id: 'generation', label: 'เคียงข้าง' },
     { id: 'vote', label: 'เลือกตั้ง' },
     { id: 'area', label: 'พื้นที่' },
+    { id: 'track-record', label: 'ผลงาน' },
+    { id: 'solutions', label: 'นโยบาย' },
+    { id: 'gallery', label: 'รูปภาพ' },
   ];
 
   useEffect(() => {
@@ -102,7 +103,7 @@ const SurasitLandingPagePro = () => {
       setShowBackToTop(window.scrollY > 500);
 
       // Update active section
-      const sections = ['hero', 'credentials', 'gallery', 'solutions', 'track-record', 'vote', 'area'];
+      const sections = ['hero', 'credentials', 'generation', 'vote', 'area', 'track-record', 'solutions', 'gallery'];
       for (const section of sections.reverse()) {
         const element = document.getElementById(section);
         if (element) {
@@ -352,79 +353,25 @@ const SurasitLandingPagePro = () => {
       {/* ==================== */}
       {/* HERO SECTION */}
       {/* ==================== */}
-      <section id="hero" className="min-h-screen flex items-center pt-24 md:pt-24 px-4 md:px-6 relative">
-        <div className="max-w-7xl mx-auto w-full">
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
-            <div className="text-center lg:text-left">
-              {/* Call out audience */}
-              <div className={`inline-block mb-4 transition-all duration-700 ${heroLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'}`}>
-                <span className="px-4 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-full text-cyan-400 text-sm md:text-base animate-bounce inline-block">
-                  ชาวชลบุรี เขต 6 อ่านตรงนี้ก่อน
-                </span>
-              </div>
-
-              {/* Main Message */}
-              <h1 className={`text-2xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight transition-all duration-700 delay-100 ${heroLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                <span className="text-cyan-400">ความมั่นคงของประเทศ</span>
-                <br />
-                การแก้ปัญหาประเทศ
-              </h1>
-
-              <p className={`text-xl md:text-3xl lg:text-4xl text-blue-200 mb-6 leading-relaxed transition-all duration-700 delay-200 ${heroLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                <span className="text-white font-bold">อยู่ที่การเลือกพรรค</span>
-              </p>
-
-              <p className={`text-base md:text-lg lg:text-xl text-blue-300 mb-8 transition-all duration-700 delay-300 ${heroLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                <span className="text-green-400 font-bold">อดีต สส. สว.</span> และผมรู้ว่า <span className="text-white font-semibold">ปัญหาจริงๆ ของคนชลบุรีคืออะไร...</span>
-              </p>
-
-              {/* Quick Stats with Counter Animation */}
-              <div className={`flex flex-wrap justify-center lg:justify-start gap-4 mb-6 transition-all duration-700 delay-400 ${heroLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                <div className="group px-5 py-4 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 hover:border-green-500/50 hover:scale-105 transition-all cursor-pointer">
-                  <div className="text-4xl md:text-5xl font-black text-green-400 group-hover:animate-bounce">8</div>
-                  <div className="text-sm md:text-base text-blue-300">กาเบอร์</div>
-                </div>
-                <div className="group px-5 py-4 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 hover:border-sky-500/50 hover:scale-105 transition-all cursor-pointer">
-                  <div className="text-4xl md:text-5xl font-black text-sky-400">{daysLeft}</div>
-                  <div className="text-sm md:text-base text-blue-300">วันที่เหลือ</div>
-                </div>
-              </div>
-
-              {/* CTA Button */}
-              <div className={`transition-all duration-700 delay-500 ${heroLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                <button
-                  onClick={() => scrollToSection('credentials')}
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full font-bold hover:scale-105 transition-transform shadow-lg shadow-cyan-500/30"
-                >
-                  <span>ดูว่าผมจะช่วยคุณได้ยังไง</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                  </svg>
-                </button>
-              </div>
+      <section id="hero" className="min-h-screen flex items-center justify-center pt-24 md:pt-24 px-4 md:px-6 relative">
+        <div className={`flex justify-center transition-all duration-1000 ${heroLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
+          <div className="relative">
+            {/* Orbiting Rings */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-72 md:w-96 h-72 md:h-96 border-2 border-blue-500/30 rounded-full" style={{ animation: 'spin 20s linear infinite' }} />
+              <div className="absolute w-64 md:w-80 h-64 md:h-80 border border-green-500/20 rounded-full" style={{ animation: 'spin 15s linear infinite reverse' }} />
             </div>
 
-            {/* Profile Card */}
-            <div className={`flex justify-center transition-all duration-1000 delay-300 order-first lg:order-last ${heroLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
-              <div className="relative">
-                {/* Orbiting Rings */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-72 md:w-96 h-72 md:h-96 border-2 border-blue-500/30 rounded-full" style={{ animation: 'spin 20s linear infinite' }} />
-                  <div className="absolute w-64 md:w-80 h-64 md:h-80 border border-green-500/20 rounded-full" style={{ animation: 'spin 15s linear infinite reverse' }} />
-                </div>
-
-                {/* Main Card */}
-                <div className="relative w-80 md:w-[28rem] h-96 md:h-[34rem] overflow-hidden hover:scale-105 transition-transform">
-                  <Image
-                    src="/baner.png"
-                    alt="สุรสิทธิ์ นิธิวุฒิวรรักษ์"
-                    fill
-                    className="object-contain"
-                    sizes="(max-width: 768px) 288px, 384px"
-                    priority
-                  />
-                </div>
-              </div>
+            {/* Main Card */}
+            <div className="relative w-80 md:w-[28rem] h-96 md:h-[34rem] overflow-hidden hover:scale-105 transition-transform">
+              <Image
+                src="/baner.png"
+                alt="สุรสิทธิ์ นิธิวุฒิวรรักษ์"
+                fill
+                className="object-contain"
+                sizes="(max-width: 768px) 288px, 384px"
+                priority
+              />
             </div>
           </div>
         </div>
@@ -490,132 +437,17 @@ const SurasitLandingPagePro = () => {
       </section>
 
       {/* ==================== */}
-      {/* GALLERY SECTION */}
+      {/* GENERATION SECTION */}
       {/* ==================== */}
-      <section id="gallery" className="py-16 md:py-20 px-4 md:px-6 bg-gradient-to-b from-blue-900/20 to-transparent">
-        <div className="max-w-6xl mx-auto">
-          <AnimateIn animation="fadeUp" className="text-center mb-12">
-            <span className="inline-block px-6 py-3 bg-blue-500/20 border border-blue-500/30 rounded-full text-blue-400 text-lg font-semibold mb-4">
-              พบกับผู้สมัคร
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold">
-              <span className="text-cyan-400">สุรสิทธิ์</span> นิธิวุฒิวรรักษ์
-            </h2>
-          </AnimateIn>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-            {['/sura1.png', '/sura2.png', '/sura3.png', '/sura4.png'].map((src, i) => (
-              <AnimateIn key={i} animation="scale" delay={i * 120}>
-                <div
-                  onClick={() => setLightboxImage(src)}
-                  className="group relative aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-white/10 hover:border-cyan-500/50 transition-all hover:scale-105 cursor-pointer"
-                >
-                  <Image
-                    src={src}
-                    alt={`สุรสิทธิ์ นิธิวุฒิวรรักษ์ ${i + 1}`}
-                    fill
-                    className="object-contain group-hover:scale-110 transition-transform duration-500"
-                    sizes="(max-width: 768px) 50vw, 25vw"
-                  />
-                  {/* Zoom Icon Overlay */}
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
-                    <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </AnimateIn>
-            ))}
-          </div>
-
-          <AnimateIn animation="fadeUp" delay={300}>
-            <div className="text-center mt-8">
-              <p className="text-blue-300 text-base md:text-lg">
-                <span className="text-cyan-400 font-bold">&quot;อดีต สส. นิ่ม&quot;</span> ประสบการณ์กว่า 40 ปี พร้อมทำงานเพื่อชาวชลบุรี
-              </p>
-            </div>
-          </AnimateIn>
-        </div>
-      </section>
-
-      {/* ==================== */}
-      {/* SOLUTIONS SECTION */}
-      {/* ==================== */}
-      <section id="solutions" className="py-16 md:py-20 px-4 md:px-6">
-        <div className="max-w-7xl mx-auto">
-          <AnimateIn animation="fadeUp" className="text-center mb-12">
-            <span className="inline-block px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-full text-green-400 text-sm md:text-base mb-4">
-              ทางออกที่คุณรอคอย
-            </span>
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4">
-              นโยบาย<span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">เศรษฐกิจ 10 พลัส+</span>
-            </h2>
-            <p className="text-blue-300 text-base md:text-xl">แก้ตรงจุด <span className="text-green-400 font-semibold">เห็นผลจริง!</span></p>
-            <p className="text-white mt-2 text-sm md:text-lg">5 ทั่วถึง + 5 คุณภาพ = ชีวิตดีขึ้นแน่นอน</p>
-          </AnimateIn>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
-            {solutions.map((item, i) => (
-              <AnimateIn key={i} animation="fadeUp" delay={i * 80}>
-                <div
-                  onClick={() => setActivePolicy(activePolicy === i ? null : i)}
-                  className={`group relative p-5 md:p-6 rounded-2xl border transition-all cursor-pointer overflow-hidden h-full ${
-                    activePolicy === i
-                      ? 'bg-green-600/30 border-green-400/50 scale-105'
-                      : 'bg-white/5 border-white/10 hover:border-green-500/30 hover:bg-white/10'
-                  }`}
-                >
-                  <h4 className="font-bold text-base md:text-lg mb-2">{item.title}</h4>
-                  <p className="text-sm md:text-base text-blue-200/80 mb-3">{item.desc}</p>
-                  <div className={`text-sm p-2 rounded-lg transition-all ${activePolicy === i ? 'bg-green-500/20 text-green-300 opacity-100' : 'opacity-0 h-0 overflow-hidden sm:opacity-100 sm:h-auto bg-green-500/10 text-green-400'}`}>
-                    <span className="font-semibold">ผลลัพธ์:</span> {item.result}
-                  </div>
-                </div>
-              </AnimateIn>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ==================== */}
-      {/* TRACK RECORD SECTION */}
-      {/* ==================== */}
-      <section id="track-record" className="py-16 md:py-20 px-4 md:px-6">
-        <div className="max-w-7xl mx-auto">
-          <AnimateIn animation="fadeUp" className="text-center mb-12">
-            <span className="inline-block px-4 py-2 bg-sky-500/20 border border-sky-500/30 rounded-full text-sky-400 text-sm md:text-base mb-4">
-              ผลงานที่ผ่านมา
-            </span>
-            <h2 className="text-2xl md:text-4xl font-bold mb-4">
-              <span className="text-sky-400">&quot;พูดแล้วทำ&quot;</span> <span className="text-green-400">พลัส</span>
-            </h2>
-            <p className="text-blue-300 text-base md:text-lg">
-              <span className="text-white font-semibold">คนพื้นที่ เข้าใจ พร้อมรับฟัง และทำทันที</span>
-            </p>
-          </AnimateIn>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {trackRecords.map((item, i) => (
-              <AnimateIn key={i} animation="scale" delay={i * 150}>
-                <div className="group p-6 bg-gradient-to-br from-sky-900/30 to-blue-900/30 rounded-2xl border border-sky-500/20 hover:border-sky-500/50 transition-all hover:-translate-y-2 h-full">
-                  <h4 className="font-bold text-lg md:text-xl mb-2">{item.title}</h4>
-                  <p className="text-sm md:text-base text-blue-200/70">{item.desc}</p>
-                </div>
-              </AnimateIn>
-            ))}
-          </div>
-
-          <AnimateIn animation="fadeUp" delay={200}>
-            <div className="mt-12 p-8 bg-white/5 rounded-3xl border border-white/10 text-center">
-              <div className="text-5xl font-serif text-white/20 mb-4">&quot;</div>
-              <blockquote className="text-xl md:text-2xl lg:text-3xl font-medium text-white mb-4 leading-relaxed">
-                เรามาร่วม<span className="text-cyan-400">สร้างศรีราชา</span> <span className="text-green-400">ไปด้วยกันครับ</span>
-              </blockquote>
-              <cite className="text-blue-300 text-base md:text-lg">— สุรสิทธิ์ นิธิวุฒิวรรักษ์</cite>
-            </div>
-          </AnimateIn>
+      <section id="generation" className="py-8 md:py-12 bg-[#1e3a5f]">
+        <div className="max-w-4xl mx-auto px-4">
+          <Image
+            src="/gener.png"
+            alt="เคียงข้างประชาชน ก้าวไปด้วยกันทุก GENERATION"
+            width={1200}
+            height={400}
+            className="w-full h-auto"
+          />
         </div>
       </section>
 
@@ -720,6 +552,136 @@ const SurasitLandingPagePro = () => {
               </AnimateIn>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ==================== */}
+      {/* TRACK RECORD SECTION */}
+      {/* ==================== */}
+      <section id="track-record" className="py-16 md:py-20 px-4 md:px-6">
+        <div className="max-w-7xl mx-auto">
+          <AnimateIn animation="fadeUp" className="text-center mb-12">
+            <span className="inline-block px-4 py-2 bg-sky-500/20 border border-sky-500/30 rounded-full text-sky-400 text-sm md:text-base mb-4">
+              ผลงานที่ผ่านมา
+            </span>
+            <h2 className="text-2xl md:text-4xl font-bold mb-4">
+              <span className="text-sky-400">&quot;พูดแล้วทำ&quot;</span> <span className="text-green-400">พลัส</span>
+            </h2>
+            <p className="text-blue-300 text-base md:text-lg">
+              <span className="text-white font-semibold">คนพื้นที่ เข้าใจ พร้อมรับฟัง และทำทันที</span>
+            </p>
+          </AnimateIn>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {trackRecords.map((item, i) => (
+              <AnimateIn key={i} animation="scale" delay={i * 150}>
+                <div className="group p-6 bg-gradient-to-br from-sky-900/30 to-blue-900/30 rounded-2xl border border-sky-500/20 hover:border-sky-500/50 transition-all hover:-translate-y-2 h-full">
+                  <h4 className="font-bold text-lg md:text-xl mb-2">{item.title}</h4>
+                  <p className="text-sm md:text-base text-blue-200/70">{item.desc}</p>
+                </div>
+              </AnimateIn>
+            ))}
+          </div>
+
+          <AnimateIn animation="fadeUp" delay={200}>
+            <div className="mt-12 p-8 bg-white/5 rounded-3xl border border-white/10 text-center">
+              <div className="text-5xl font-serif text-white/20 mb-4">&quot;</div>
+              <blockquote className="text-xl md:text-2xl lg:text-3xl font-medium text-white mb-4 leading-relaxed">
+                เรามาร่วม<span className="text-cyan-400">สร้างศรีราชา</span> <span className="text-green-400">ไปด้วยกันครับ</span>
+              </blockquote>
+              <cite className="text-blue-300 text-base md:text-lg">— สุรสิทธิ์ นิธิวุฒิวรรักษ์</cite>
+            </div>
+          </AnimateIn>
+        </div>
+      </section>
+
+      {/* ==================== */}
+      {/* SOLUTIONS SECTION */}
+      {/* ==================== */}
+      <section id="solutions" className="py-16 md:py-20 px-4 md:px-6">
+        <div className="max-w-7xl mx-auto">
+          <AnimateIn animation="fadeUp" className="text-center mb-12">
+            <span className="inline-block px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-full text-green-400 text-sm md:text-base mb-4">
+              ทางออกที่คุณรอคอย
+            </span>
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4">
+              นโยบาย<span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">เศรษฐกิจ 10 พลัส+</span>
+            </h2>
+            <p className="text-blue-300 text-base md:text-xl">แก้ตรงจุด <span className="text-green-400 font-semibold">เห็นผลจริง!</span></p>
+            <p className="text-white mt-2 text-sm md:text-lg">5 ทั่วถึง + 5 คุณภาพ = ชีวิตดีขึ้นแน่นอน</p>
+          </AnimateIn>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
+            {solutions.map((item, i) => (
+              <AnimateIn key={i} animation="fadeUp" delay={i * 80}>
+                <div
+                  onClick={() => setActivePolicy(activePolicy === i ? null : i)}
+                  className={`group relative p-5 md:p-6 rounded-2xl border transition-all cursor-pointer overflow-hidden h-full ${
+                    activePolicy === i
+                      ? 'bg-green-600/30 border-green-400/50 scale-105'
+                      : 'bg-white/5 border-white/10 hover:border-green-500/30 hover:bg-white/10'
+                  }`}
+                >
+                  <h4 className="font-bold text-base md:text-lg mb-2">{item.title}</h4>
+                  <p className="text-sm md:text-base text-blue-200/80 mb-3">{item.desc}</p>
+                  <div className={`text-sm p-2 rounded-lg transition-all ${activePolicy === i ? 'bg-green-500/20 text-green-300 opacity-100' : 'opacity-0 h-0 overflow-hidden sm:opacity-100 sm:h-auto bg-green-500/10 text-green-400'}`}>
+                    <span className="font-semibold">ผลลัพธ์:</span> {item.result}
+                  </div>
+                </div>
+              </AnimateIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ==================== */}
+      {/* GALLERY SECTION */}
+      {/* ==================== */}
+      <section id="gallery" className="py-16 md:py-20 px-4 md:px-6 bg-gradient-to-b from-blue-900/20 to-transparent">
+        <div className="max-w-6xl mx-auto">
+          <AnimateIn animation="fadeUp" className="text-center mb-12">
+            <span className="inline-block px-6 py-3 bg-blue-500/20 border border-blue-500/30 rounded-full text-blue-400 text-lg font-semibold mb-4">
+              พบกับผู้สมัคร
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold">
+              <span className="text-cyan-400">สุรสิทธิ์</span> นิธิวุฒิวรรักษ์
+            </h2>
+          </AnimateIn>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            {['/sura1.png', '/sura2.png', '/sura3.png', '/sura4.png'].map((src, i) => (
+              <AnimateIn key={i} animation="scale" delay={i * 120}>
+                <div
+                  onClick={() => setLightboxImage(src)}
+                  className="group relative aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-white/10 hover:border-cyan-500/50 transition-all hover:scale-105 cursor-pointer"
+                >
+                  <Image
+                    src={src}
+                    alt={`สุรสิทธิ์ นิธิวุฒิวรรักษ์ ${i + 1}`}
+                    fill
+                    className="object-contain group-hover:scale-110 transition-transform duration-500"
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                  />
+                  {/* Zoom Icon Overlay */}
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
+                    <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </AnimateIn>
+            ))}
+          </div>
+
+          <AnimateIn animation="fadeUp" delay={300}>
+            <div className="text-center mt-8">
+              <p className="text-blue-300 text-base md:text-lg">
+                <span className="text-cyan-400 font-bold">&quot;อดีต สส. นิ่ม&quot;</span> ประสบการณ์กว่า 40 ปี พร้อมทำงานเพื่อชาวชลบุรี
+              </p>
+            </div>
+          </AnimateIn>
         </div>
       </section>
 
