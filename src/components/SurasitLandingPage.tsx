@@ -872,13 +872,13 @@ const SurasitLandingPagePro = () => {
         {/* Vote Button */}
         <button
           onClick={() => scrollToSection('vote')}
-          className="w-16 h-20 rounded-2xl overflow-hidden shadow-2xl shadow-green-500/40 hover:scale-110 transition-transform"
+          className="w-24 h-32 rounded-2xl overflow-hidden shadow-2xl shadow-green-500/40 hover:scale-110 transition-transform"
         >
           <Image
             src="/baner.png"
             alt="กาเบอร์ 8"
-            width={64}
-            height={80}
+            width={96}
+            height={128}
             className="w-full h-full object-cover"
           />
         </button>
