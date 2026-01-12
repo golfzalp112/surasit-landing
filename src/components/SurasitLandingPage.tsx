@@ -405,7 +405,7 @@ const SurasitLandingPagePro = () => {
             </div>
 
             {/* Profile Card */}
-            <div className={`flex justify-center transition-all duration-1000 delay-300 ${heroLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
+            <div className={`flex justify-center transition-all duration-1000 delay-300 order-first lg:order-last ${heroLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
               <div className="relative">
                 {/* Orbiting Rings */}
                 <div className="absolute inset-0 flex items-center justify-center">
